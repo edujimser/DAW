@@ -33,7 +33,7 @@
             </div>
             <!-- Register buttons  https://mdbootstrap.com/docs/standard/extended/login/-->
             <div class="text-center">
-                <p>No tienes cuenta? <a href="#!">Registrate</a></p>
+                <p>No tienes cuenta? <a href="./view.register.php">Registrate</a></p>
             </div>
             </form>
         </div>

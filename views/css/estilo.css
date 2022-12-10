@@ -15,151 +15,32 @@ body {
 
 /**  NAV  -------------------------------------------------------------------------------------**/
 
-@import url('https://fonts.googleapis.com/css?family=Oswald:500');
 
-header {
-  padding-top: 20px;
-  margin-bottom: 40px;
-}
 
-.nav .a {
-  font-family: 'Oswald', sans-serif;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #16151b;
-  margin: 0 15px;
-  font-size: 16px;
-  letter-spacing: 1px;
-  position: relative;
-  display: inline-block;
-}
-
-.nav .logo {
-  font-family: 'Oswald', sans-serif;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #16151b;
-  margin: 0 15px;
-  font-size: 16px;
-  letter-spacing: 1px;
-  position: relative;
-  display: inline-block;
-}
-
-.nav .logo img {
+.nav-logo-home {
   height: 40px;
   width: 40px;
 }
 
-.nav {
-  width: 100%;
-  top: 50px;
-  text-align: center;
-}
 
-.nav .a:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  background: #16151b;
-  top: 47%;
-  animation: out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
-}
-
-.nav .a:hover:before {
-  animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
-
-}
-
-@keyframes in {
-  0% {
-    width: 0;
-    left: 0;
-    right: auto;
-  }
-
-  100% {
-    left: 0;
-    right: auto;
-    width: 100%;
-  }
-}
-
-@keyframes out {
-  0% {
-    width: 100%;
-    left: auto;
-    right: 0;
-  }
-
-  100% {
-    width: 0;
-    left: auto;
-    right: 0;
-  }
-}
-
-@keyframes show {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 
 
 
 /**  FOOTER  -------------------------------------------------------------------------------------**/
-.footer {
-  display:flex;
-  flex-direction:row;
-  flex-wrap:wrap;
-  justify-content:start;
-  align-items:unset;
-  align-content:flex-end;
-  padding: 20px 30px 20px 30px;
-  color: #2f2f2f;
-  background-color: #fff;
-  border-top: 1px solid #acacac;
+.texto-footer-snapDog{
+  text-align: justify;
+  margin-top: 5px;
 }
 
-.footer div{
-  margin-right: 100px;
+footer button{
+  color: white;
+  background-color: #E2942D;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-
-
-.footerLogo img {
-  height: 100px;
-  width: 125px;
-}
-
-
-.enlace {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
-  width: auto;
-  height: auto;
-  overflow: auto;
-  flex-direction: row;
-  padding-top: 20px;
-}
-
-.enlace .direccion {
-  width: auto;
-  height: auto;
-  margin-left: 50px;
+footer button:hover {
+  background-color: #CE7A33;
 }
 
 
@@ -202,3 +83,39 @@ header {
 .contenedor-formulario .formulario .contendor-boton button:hover {
   background-color: #CE7A33;
 }
+
+
+
+/**  REGISTER  -------------------------------------------------------------------------------------**/
+
+.registro{
+  max-width: auto;
+}
+.contenedor-formulario-registro{
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+	align-content: center;
+  padding-top: 300px;
+
+}
+
+.formulario-registro{
+  max-width: 800px;
+}
+
+
+.registro .contenedor-formulario-registro .formulario-registro button{
+  color: white;
+  background-color: #E2942D;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.registro .contenedor-formulario-registro .formulario-registro button:hover {
+  background-color: #CE7A33;
+}
+
+
+
