@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/estilo.css" type="text/css">
+    <link rel="stylesheet" href="http://127.0.0.1/DAW/views/css/estilo.css" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <title>Document</title>
@@ -16,10 +16,10 @@
         <div class="contenedor-formulario-registro">
 
             <div class="contenedor-imagen-registro">
-                <img src="./img/logo.png" alt="logo">
+                <img src="http://127.0.0.1/DAW/views/img/logo.png" alt="logo">
             </div>
 
-            <form class="formulario-registro">
+            <form class="formulario-registro" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" name="formulario-registro" >
                 <div>
                     <div class="card-body p-md-5 text-black">
 
@@ -81,7 +81,7 @@
                         </div>
 
                         <div class="d-flex justify-content-center pt-3">
-                            <button type="button" class="btn fw-semibold btn-block mb-4">  Registrate  </button>
+                            <button type="submit" name="submit" value="registro" class="btn fw-semibold btn-block mb-4">  Registrate  </button>
                         </div>
 
                         <div class="text-center">
