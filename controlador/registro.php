@@ -19,7 +19,7 @@
 
         $json = json_encode($registro);
 
-        $endpoint = "http://" . $_SERVER['HTTP_HOST'] . "/DAW/api/index.api.php";
+        $endpoint = "http://" . $_SERVER['HTTP_HOST'] . "/DAW/api/api-registro-login/index.api.php";
   
         $curl = curl_init();
 
@@ -47,7 +47,7 @@
 
         $json = json_encode($registro);
 
-        $endpoint = "http://" . $_SERVER['HTTP_HOST'] . "/DAW/api/index.api.php";
+        $endpoint = "http://" . $_SERVER['HTTP_HOST'] . "/DAW/api/api-registro-login/index.api.php";
   
         $curl = curl_init();
 
