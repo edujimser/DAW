@@ -108,7 +108,7 @@ footer button:hover {
 
 
 .registro .contenedor-formulario-registro .formulario-registro button{
-  color: white;
+  color: rgb(255, 255, 255);
   background-color: #E2942D;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
@@ -116,6 +116,5 @@ footer button:hover {
 .registro .contenedor-formulario-registro .formulario-registro button:hover {
   background-color: #CE7A33;
 }
-
 
 

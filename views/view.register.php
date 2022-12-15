@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="http://127.0.0.1/DAW/views/css/estilo.css" type="text/css">
+    <link rel="stylesheet" href="http://127.0.0.1/DAW/views/css/sweetalert2.min.css" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <title>Document</title>
@@ -59,7 +60,7 @@
                             </div>
                             <div class="col-md-6 mb-4">
                                 <div class="form-outline">
-                                    <input type="password" id="pass" name="pass" class="form-control form-control-lg" />
+                                    <input type="password" id="pass" name="pass" class="form-control form-control-lg" required />
                                     <label class="form-label" for="pass">Contraseña</label>
                                 </div>
                             </div>
@@ -117,7 +118,7 @@
                             </svg>
                             <!-- NOMUSER-->
                             <?php if($mensajeRegistroFallido['nomUser']) : ?>
-                                <div class="alert alert-warning d-flex align-items-center" role="alert">
+                                <div class="alert alert-warning d-flex align-items-center" role="alert" id ="mensajeErrorDatoDuplicadoDB"> 
                                 <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:">
                                     <use xlink:href="#exclamation-triangle-fill" />
                                 </svg>
@@ -128,7 +129,7 @@
                             <?php endif; ?>
                             <!-- DNI-->
                             <?php if(isset($mensajeRegistroFallido['DNI'])) : ?>
-                                <div class="alert alert-warning d-flex align-items-center" role="alert">
+                                <div class="alert alert-warning d-flex align-items-center" role="alert" id ="mensajeErrorDatoDuplicadoDB">
                                 <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:">
                                     <use xlink:href="#exclamation-triangle-fill" />
                                 </svg>
@@ -139,7 +140,7 @@
                             <?php endif; ?> 
                             <!-- EMAIL-->
                             <?php if(isset($mensajeRegistroFallido['email'])) : ?>
-                                <div class="alert alert-warning d-flex align-items-center" role="alert">
+                                <div class="alert alert-warning d-flex align-items-center" role="alert" id ="mensajeErrorDatoDuplicadoDB">
                                 <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:">
                                     <use xlink:href="#exclamation-triangle-fill" />
                                 </svg>
@@ -150,7 +151,7 @@
                             <?php endif; ?>  
                             <!-- EMAIL-->
                             <?php if(isset($mensajeRegistroFallido['telefono'])) : ?>
-                                <div class="alert alert-warning d-flex align-items-center" role="alert">
+                                <div class="alert alert-warning d-flex align-items-center" role="alert" id ="mensajeErrorDatoDuplicadoDB">
                                 <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:">
                                     <use xlink:href="#exclamation-triangle-fill" />
                                 </svg>
@@ -163,7 +164,7 @@
                         <!-- ALERTS USUARIO EXISTE -->
 
                         <div class="d-flex justify-content-center pt-3">
-                            <button type="submit" name="submit" value="registro" class="btn fw-semibold btn-block mb-4"> Registrate </button>
+                            <button type="submit" name="submit" id ="submit" value="registro" class="btn fw-semibold btn-block mb-4"> Registrate </button>
                         </div>
 
                         <div class="text-center">
@@ -176,6 +177,8 @@
         </div>
 
     </section>
+    <script src="http://127.0.0.1/DAW/js/registro.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 </body>

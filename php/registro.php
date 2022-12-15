@@ -24,7 +24,10 @@
                 if (isset($usuario)) {
                         
                         $mensajeRegistroFallido = [];
-                        
+
+                        //ELEMINAR MENSAJES YA EXISTENTES
+                        //DESARROLLADO EN JAVASCRIPT CON id  = "mensajeErrorDatoDuplicadoDB" function elminarMensajeErrorDatoDuplicadoDB()
+
                         //MENSAJE PARA EL USUARIO EN EL REGISTRO YA EXISTE EN LA BASE DE DATOS
                     foreach ($usuario as $index => $dato) {
                             if(isset($usuario[$index]['nomUser']) == $_POST['nomUser']){
@@ -42,17 +45,6 @@
                             if($usuario[$index]['telefono'] == $_POST['telefono']){
                                 $mensajeRegistroFallido["telefono"] = $usuario[$index]['telefono'];
                             };  
-
-                            //RETORNO DE VALORES AL FORMULARIO
-                            $nombreRetorno = limpiarDatos($_POST['nombre']);
-                            $apellido1Retorno = limpiarDatos($_POST['apellido1']);
-                            $apellido2Retorno = limpiarDatos($_POST['apellido1']);
-                            $nomUserRetorno = limpiarDatos($_POST['nomUser']);
-                            $DNIRetorno = limpiarDatos($_POST['DNI']);
-                            $passRetorno =  limpiarDatos($_POST['pass']);
-                            $emailRetorno =  limpiarDatos($_POST['email']);
-                            $telefonoRetorno = limpiarDatos($_POST['telefono']);
-                            $CPRetorno = limpiarDatos($_POST['CP']);
                         };
                     
                     }else{
