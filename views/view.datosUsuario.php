@@ -101,7 +101,7 @@
                             </div>
                         </div>
                         <div class="form-outline mb-4">
-                                <input type="text" id="descripcionCompanero" name="descripcionCompanero" class="form-control form-control-lg"  style="WIDTH: 1425px; HEIGHT: 98px" size=32 />
+                                <input type="text" id="descripcionCompanero" name="descripcionCompanero" class="form-control form-control-lg"/>
                                 <label class="form-label" for="descripcionCompanero">Describe a tu compañero ideal</label>
                             </div>
                         <div class="d-flex justify-content-center pt-3">
