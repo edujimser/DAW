@@ -105,7 +105,7 @@
                                 <label class="form-label" for="descripcionCompanero">Describe a tu compañero ideal</label>
                             </div>
                         <div class="d-flex justify-content-center pt-3">
-                            <button type="submit" name="submit" id ="submit" value="registro" class="btn fw-semibold btn-block mb-4"> Aceptar </button>
+                            <button type="submit" name="submit" id ="submit" value="registroDatos" class="btn fw-semibold btn-block mb-4"> Guardar Datos </button>
                         </div>
                 </div>
             </div>
