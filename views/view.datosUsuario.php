@@ -1,4 +1,14 @@
+<?php
 
+require "proyectoDAW-master/controlador/datosUsuario.php";
+
+if(isset($_POST["login"])){
+    insertarDatosUsuario($_POST["edad"], $_POST["estadoCivil"], $_POST["grupoFamiliar"], $_POST["estadoProfesional"], $_POST["metrosVivienda"], $_POST["tipoVivienda"], $_POST["profesion"], $_POST["rentaAnual"],
+    $_POST["hobbies"], $_POST["descripcionBusqueda"], $_POST["descripcionCompanero"]);
+    // FALTA HEADER AQUI <-------
+    exit;
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
