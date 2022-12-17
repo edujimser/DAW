@@ -5,7 +5,7 @@
         // ENVIO CONTROLADOR FORMULARIO
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['submit'] == 'registro')) {
             
-            // COMPROBAR QUE EEL USUARIO HA RELLENADO TODOS LOS CAMPOS
+            // COMPROBAR QUE EL USUARIO HA RELLENADO TODOS LOS CAMPOS
             if (($_POST['nombre'] == '') || ($_POST['apellido1'] == '') || ($_POST['apellido2'] == '') || ($_POST['nomUser'] == '') || ($_POST['DNI'] == '') || ($_POST['pass'] == '') || ($_POST['email'] == '') || ($_POST['telefono'] == '') || ($_POST['CP'] == '')) {
                 
                 $mensajeRegistroCamposVacios = "Todos los campos deben estar rellenos";
