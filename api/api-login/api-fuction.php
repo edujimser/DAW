@@ -10,10 +10,10 @@ function obtenerDatosUsuario(){
     // OBTENER DATOS DE USUARIO PARA REGISTRO
     if($datos['submit'] == 'registro'){
    
-        $sql = "SELECT * FROM usuario WHERE nomUser = ? AND pass = ?";
+        $sql = "SELECT * FROM usuario WHERE email = ? AND pass = ?";
         $stm = $conexion->prepare($sql);
         $stm->bind_param('ss',
-                $datos["nomUser"],
+                $datos["email"],
                 $datos["pass"]); 
         
        $stm->execute();
