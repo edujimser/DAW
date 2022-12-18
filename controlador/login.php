@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php 
 
     // OBTENER LOS DATOS DE USUARIO DURANTE EL REGISTRO 
