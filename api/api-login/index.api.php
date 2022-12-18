@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
  require './api-fuction.php';
  
@@ -7,5 +6,4 @@
             obtenerDatosUsuario();
             break;
     };
-
 ?>
