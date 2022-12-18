@@ -36,10 +36,10 @@ function insersionDatos(){
 
 function obtenerDatosUsuario(){
     global $conexion;
-    $usuario = [];
+    $usuario = array();
 
     $datos = json_decode(file_get_contents('php://input'), true);
-  ;
+  
     // OBTENER DATOS DE USUARIO PARA REGISTRO
     if($datos['submit'] == 'registro'){
    
@@ -55,7 +55,6 @@ function obtenerDatosUsuario(){
        $dato = $stm->get_result();
 
         if ($dato) {
-
             while ($fila = $dato->fetch_assoc()) {
                 array_push($usuario, $fila);
             };
@@ -67,4 +66,7 @@ function obtenerDatosUsuario(){
         };
     };
 }
+
 ?>
+
+
