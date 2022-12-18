@@ -4,13 +4,15 @@
 
         // ENVIO CONTROLADOR FORMULARIO
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['submit'] == 'registro')) {
-            
+
             // COMPROBAR QUE EEL USUARIO HA RELLENADO TODOS LOS CAMPOS
             if (($_POST['nombre'] == '') || ($_POST['apellido1'] == '') || ($_POST['apellido2'] == '') || ($_POST['nomUser'] == '') || ($_POST['DNI'] == '') || ($_POST['pass'] == '') || ($_POST['email'] == '') || ($_POST['telefono'] == '') || ($_POST['CP'] == '')) {
                 
                 $mensajeRegistroCamposVacios = "Todos los campos deben estar rellenos";
 
             }else{
+                //PARA PROGRAMA PARA SPINER
+                sleep(3);
                 // COMPROBAR  EXISTENCIA USUARIO
                 $usuario = [];
                 $usuario  = obtenerDatosUsuarioRegistro( 
@@ -21,8 +23,7 @@
                     limpiarDatos($_POST['submit'])
                 );
 
-                if (isset($usuario)) {
-                        
+                if (!empty($usuario)) {
                         $mensajeRegistroFallido = [];
 
                         //ELEMINAR MENSAJES YA EXISTENTES
@@ -30,7 +31,7 @@
 
                         //MENSAJE PARA EL USUARIO EN EL REGISTRO YA EXISTE EN LA BASE DE DATOS
                     foreach ($usuario as $index => $dato) {
-                            if(isset($usuario[$index]['nomUser']) == $_POST['nomUser']){
+                            if($usuario[$index]['nomUser']== $_POST['nomUser']){
                                 $mensajeRegistroFallido["nomUser"] = $usuario[$index]['nomUser'];
                             };
                         
@@ -47,8 +48,7 @@
                             };  
                         };
                     
-                    }else{
-                        //INSERTAR USUARIO
+                }else{
                         insertarRegistro(
                             limpiarDatos($_POST['nombre']), 
                             limpiarDatos($_POST['apellido1']), 
@@ -59,11 +59,11 @@
                             limpiarDatos($_POST['email']),
                             limpiarDatos($_POST['telefono']),
                             limpiarDatos($_POST['CP']),
-                            limpiarDatos($_POST['submit'])
-                        );
-                    };
-            
+                            limpiarDatos($_POST['submit']));
+                };
+                
             };
         };
 
     require '../views/view.register.php';
+?>

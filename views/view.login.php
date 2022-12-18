@@ -11,9 +11,9 @@
 <body>
     <div class="contenedor-formulario">
         <div class="contenedor-imagen">
-            <img src="./img/logo.png" alt="logo">
+            <img src="http://127.0.0.1/DAW/views/img/logo.png" alt="logo">
         </div>
-        <div class="formulario">
+        <div class="formulario" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" name="formulario-login" id="formulario-login" >
             <form>
             <!-- Email input -->
             <div class="form-outline mb-4">
@@ -29,7 +29,7 @@
 
             <!-- Enviar button -->
             <div class="contendor-boton">
-                <button type="button" id="enviar" class="btn fw-semibold btn-block mb-4">Iniciar Sessión</button>
+                <button type="submit" value="inicioSession" id="enviar" class="btn fw-semibold btn-block mb-4">Iniciar Sessión</button>
             </div>
             <!-- Register buttons  https://mdbootstrap.com/docs/standard/extended/login/-->
             <div class="text-center">

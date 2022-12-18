@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="http://127.0.0.1/DAW/views/css/sweetalert2.min.css" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-    <title>Document</title>
+    <title>Registro</title>
 </head>
 
 <body>
@@ -72,12 +72,12 @@
                         </div>
 
                         <div class="form-outline mb-4">
-                            <input type="text" id="telefono" name="telefono" class="form-control form-control-lg" />
+                            <input type="number" id="telefono" name="telefono" class="form-control form-control-lg" />
                             <label class="form-label" for="telefono">Teléfono de contacto</label>
                         </div>
 
                         <div class="form-outline mb-4">
-                            <input type="text" id="CP" name="CP" class="form-control form-control-lg" />
+                            <input type="number" id="CP" name="CP" class="form-control form-control-lg" />
                             <label class="form-label" for="CP">Código Postal</label>
                         </div>
                         <!-- ALERTS CAMPOS VACIOS -->
@@ -117,7 +117,7 @@
                                 </symbol>
                             </svg>
                             <!-- NOMUSER-->
-                            <?php if($mensajeRegistroFallido['nomUser']) : ?>
+                            <?php if(isset($mensajeRegistroFallido['nomUser'])) : ?>
                                 <div class="alert alert-warning d-flex align-items-center" role="alert" id ="mensajeErrorDatoDuplicadoDB"> 
                                 <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:">
                                     <use xlink:href="#exclamation-triangle-fill" />
@@ -161,14 +161,18 @@
                             </div>
                             <?php endif; ?>  
                         <?php endif; ?>
-                        <!-- ALERTS USUARIO EXISTE -->
+                        <!-- ALERTS USUARIO EXISTE -->       
+                        <!-- SNIPPER -->
+                        <div id="contendor-snipper">
 
+                        </div>
+                        <!-- SNIPPER --> 
                         <div class="d-flex justify-content-center pt-3">
                             <button type="submit" name="submit" id ="submit" value="registro" class="btn fw-semibold btn-block mb-4"> Registrate </button>
                         </div>
 
                         <div class="text-center">
-                            <p> Tienes cuenta? <a href="./view.login.php">Inicia Sessión</a></p>
+                            <p> Tienes cuenta? <a href="http://127.0.0.1/DAW/php/login.php">Inicia Sessión</a></p>
                         </div>
 
                     </div>

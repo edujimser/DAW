@@ -19,7 +19,7 @@
 
         $json = json_encode($registro);
 
-        $endpoint = "http://" . $_SERVER['HTTP_HOST'] . "/DAW/api/api-registro-login/index.api.php";
+        $endpoint = "http://" . $_SERVER['HTTP_HOST'] . "/DAW/api/api-registro/index.api.php";
   
         $curl = curl_init();
 
@@ -37,6 +37,7 @@
 
     // OBTENER LOS DATOS DE USUARIO DURANTE EL REGISTRO 
     function obtenerDatosUsuarioRegistro( $nomUser, $DNI, $email, $telefono, $submit){
+
         $registro = [
             "nomUser"=>$nomUser, 
             "DNI"=>$DNI, 
@@ -47,13 +48,14 @@
 
         $json = json_encode($registro);
 
-        $endpoint = "http://" . $_SERVER['HTTP_HOST'] . "/DAW/api/api-registro-login/index.api.php";
+        $endpoint = "http://" . $_SERVER['HTTP_HOST'] . "/DAW/api/api-registro/index.api.php";
   
         $curl = curl_init();
 
         curl_setopt($curl, CURLOPT_URL, $endpoint);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1 );
         curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "GET");
+        curl_setopt($curl, CURLOPT_POST, 1);
         curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
         curl_setopt($curl, CURLOPT_POSTFIELDS, $json);
 
@@ -61,11 +63,12 @@
 
         curl_close($curl);
 
-        $usuario = json_decode($output, 1);
-        
-        return $usuario;
+       $usuario = json_decode($output,true);
 
+       return $usuario;
     };
     
+
+
 
 ?>
