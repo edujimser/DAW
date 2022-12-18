@@ -7,8 +7,8 @@ $cookie_value = "Marcos García";
 // ESTABLECE EL TIEMPO DE EXPIRACIÓN A UNA HORA A PARTIR DE AHORA
 $expire = time() + 3600;
 
-// RUTA Y DOMINIO DE LA COOKIE
-$ruta = '/cookies/';
+// DOMINIO DE LA COOKIE
+
 $dominio = "SnapDog.com";
 
 // SOLO ENVÍA LA COOKIE CON CONEXIÓN HTTPS
@@ -18,7 +18,7 @@ $seguridad = false;
 $solohttp = true;
 
 // ESTABLECER LA COOKIE
-setcookie($cookie_name, $cookie_value, $expire, $ruta, $dominio, $seguridad, $solohttp);
+setcookie($cookie_name, $cookie_value, $expire, $dominio, $seguridad, $solohttp);
 
 
 // RECUPERAR EL VALOR DE LA COOKIE "usuario"
