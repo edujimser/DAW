@@ -1,5 +1,6 @@
 
 <?php
+
     require '../controlador/login.php';
     require './funciones/fucionesExternas.php';
 
