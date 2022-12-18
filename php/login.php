@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-<?php 
-=======
+
 <?php
->>>>>>> 9c79600374752277b42e60b8e7c92df760a35558
+
     require '../controlador/login.php';
     require './funciones/fucionesExternas.php';
 

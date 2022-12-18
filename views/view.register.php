@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     <section class="registro">
         <div class="contenedor-formulario-registro">
 
@@ -61,7 +62,7 @@
                             <div class="col-md-6 mb-4">
                                 <div class="form-outline">
                                     <input type="password" id="pass" name="pass" class="form-control form-control-lg" required />
-                                    <label class="form-label" for="pass">Contraseña</label>
+                                    <label class="form-label" for="pass">Password</label>
                                 </div>
                             </div>
                         </div>
