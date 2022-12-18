@@ -1,5 +1,4 @@
 <?php
-<?php 
     require '../controlador/login.php';
     require './funciones/fucionesExternas.php';
 
@@ -10,6 +9,4 @@
 
 
 require '../views/view.login.php';
-?>
-
 ?>
