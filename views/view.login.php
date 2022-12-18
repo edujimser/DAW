@@ -13,28 +13,28 @@
         <div class="contenedor-imagen">
             <img src="http://127.0.0.1/DAW/views/img/logo.png" alt="logo">
         </div>
-        <div class="formulario" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" name="formulario-login" id="formulario-login" >
-            <form>
-            <!-- Email input -->
-            <div class="form-outline mb-4">
-                <input type="email" id="email" name="email" class="form-control" />
-                <label class="form-label" for="email">Correo Electrónico</label>
-            </div>
+        <div class="formulario">
+            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" id="formulario-login" >
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                    <input type="email" id="email" name="email" class="form-control" />
+                    <label class="form-label" for="email">Correo Electrónico</label>
+                </div>
 
-            <!-- Password input -->
-            <div class="form-outline mb-4">
-                <input type="password" id="password" name="iniciar session" class="form-control" />
-                <label class="form-label" for="password">Contraseña</label>
-            </div>
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                    <input type="password" id="password" name="pass" class="form-control" />
+                    <label class="form-label" for="password">Contraseña</label>
+                </div>
 
-            <!-- Enviar button -->
-            <div class="contendor-boton">
-                <button type="submit" value="inicioSession" id="enviar" class="btn fw-semibold btn-block mb-4">Iniciar Sessión</button>
-            </div>
-            <!-- Register buttons  https://mdbootstrap.com/docs/standard/extended/login/-->
-            <div class="text-center">
-                <p>No tienes cuenta? <a href="http://127.0.0.1/DAW/php/registro.php">Registrate</a></p>
-            </div>
+                <!-- Enviar button -->
+                <div class="contendor-boton">
+                    <button type="submit" name="submit" value="inicioSession" id="enviar" class="btn fw-semibold btn-block mb-4">Iniciar Sessión</button>
+                </div>
+                <!-- Register buttons  https://mdbootstrap.com/docs/standard/extended/login/-->
+                <div class="text-center">
+                    <p>No tienes cuenta? <a href="http://127.0.0.1/DAW/php/registro.php">Registrate</a></p>
+                </div>
             </form>
         </div>
     </div>

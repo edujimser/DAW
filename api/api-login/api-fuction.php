@@ -9,7 +9,7 @@ function obtenerDatosUsuario(){
     $datos = json_decode(file_get_contents('php://input'), true);
   
     // OBTENER DATOS DE USUARIO PARA REGISTRO
-    if($datos['submit'] == 'registro'){
+    if($datos['submit'] == 'inicioSession'){
    
         $sql = "SELECT * FROM usuario WHERE email = ? AND pass = ?";
         $stm = $conexion->prepare($sql);

@@ -1,11 +1,12 @@
 
 <?php 
     // OBTENER LOS DATOS DE USUARIO DURANTE EL REGISTRO 
-    function obtenerDatosUsuario( $email, $pass){
+    function obtenerDatosUsuario( $email, $pass, $submit ){
 
         $registro = [
             "email"=>$email, 
-            "pass"=>$pass, 
+            "pass"=>$pass,
+            "submit"=>$submit 
         ];
 
         $json = json_encode($registro);
