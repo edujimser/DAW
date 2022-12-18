@@ -10,10 +10,10 @@
     <title>Cuestionario</title>
 </head>
 <body>
-    <div> <!-- contenedor formulario hay que poner en class -->
-        <form role="form" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" id="cuestionario">
-            <div>
-                <label for="selectVivienda">Seleccione la vivienda en la que reside habitualmente:</label>
+    <div class="contenedor-formulario"> 
+        <form class="formulario-registro" role="form" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" id="cuestionario">
+            <div class="row col-md-6 mb-4 form-outline">
+                <label for="selectVivienda">Seleccione el tipo de vivienda en la que reside habitualmente:</label>
                 <select id="selectVivienda" name="vivienda">
                     <option value="" selected>Seleccione el tipo</option>
                     <option value="pisoPeq">Piso hasta 70m</option>
@@ -22,15 +22,18 @@
                     <option value="parcela">Casa con parcela</option>
                 </select>   
             </div>
-            <div>
-                <label for="selectNiños">¿Hay niños o posibilidad de que los haya en un futuro en su vivienda?</label>
-                <select id="selectNiños" name="niños">
-                    <option value="" selected>Seleccione</option>
-                    <option value="si">Sí</option>
-                    <option value="no">No</option>
-                </select>
+            <div class="row col-md-12 mb-4 form-outline">
+                <label for="niños">¿Hay niños o posibilidad de que los haya en un futuro en su núcleo familiar?</label>
+                <div>
+                    <input type="radio" name="niños" id="niñosSi" value="niñosSi">
+                    <label for="niñosSi">Sí</label>
+                </div>
+                <div>
+                    <input type="radio" name="niños" id="niñosNo" value="niñosNo">
+                    <label for="niñosNo">No</label>
+                </div>
             </div>
-            <div>
+            <div class="row col-md-12 mb-4 form-outline">
                 <label for="mascotas">Seleccione si tiene alguna o varias de las siguientes mascotas actualmente:</label>
                 <div>
                     <input type="checkbox" name="mascotas" id="perro" value="perro">
@@ -45,7 +48,7 @@
                     <label for="roedor">Conejos/Roedores/Aves</label>
                 </div>
             </div>
-            <div>
+            <div class="row col-md-12 mb-4 form-outline">
                 <label for="experiencia">Seleccione si tiene experiencia previa en perros de algún tipo:</label>
                 <div>
                     <input type="checkbox" name="experiencia" id="sano" value="sano">
@@ -68,7 +71,7 @@
                     <label for="sinExp">Sin experiencia previa</label>
                 </div>
             </div>
-            <div>
+            <div class="row col-md-12 mb-4 form-outline">
                 <label for="ayuda">¿Estaría dispuesto a contratar ayuda de un profesional en comportamiento animal si fuera necesario?</label>
                 <div>
                     <input type="radio" name="ayuda" id="ayudaSi" value="ayudaSi">
@@ -79,7 +82,7 @@
                     <label for="ayudaNo">No</label>
                 </div>
             </div>
-            <div>
+            <div class="row col-md-12 mb-4 form-outline">
                 <label for="licencia">¿Tiene o estaría dispuesto a tener licencia para perros catalogados como potencialmente peligrosos?</label>
                 <div>
                     <input type="radio" name="licencia" id="licenciaSi" value="licenciaSi">
@@ -90,7 +93,7 @@
                     <label for="licenciaNo">No</label>
                 </div>
             </div>
-            <div>
+            <div class="row col-md-12 mb-4 form-outline">
                 <label for="actividad">¿Cómo definiría la actividad de su núcleo familiar en la que le acompañará su mascota?</label>
                 <div>
                     <input type="radio" name="actividad" id="reducida" value="reducida">
@@ -109,15 +112,18 @@
                     <label for="deportista">Persona/s activa/s y/o deportista/s con salidas al aire libre (parque, playa, montaña...) al menos una vez a la semana</label>
                 </div>
             </div>
-            <div>
+            <div class="row col-md-12 mb-4 form-outline">
                 <label for="adopcion">¿Por qué desea adoptar y no comprar un perro?</label>
                 <div>
-                    <textarea id="adopcion" rows="10" cols="40"></textarea>
+                    <textarea id="adopcion" rows="10" cols="60"></textarea>
                 </div>
             </div>
-            <div>
+            <div class="col-md-12 mb-4 form-outline">
                 <label for="agree">En caso de no poder atenderlo, debe avisar en primer lugar a la protectora. ¿Está de acuerdo?</label>
                 <input type="checkbox" id="agree" value="agree">
+            </div>
+            <div class="d-flex justify-content-center pt-3">
+                <button type="submit" name="submit" id ="submit" value="registroDatos" class="btn fw-semibold btn-block mb-4"> Guardar Datos </button>
             </div>
         </form>
     </div>
