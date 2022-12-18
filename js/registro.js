@@ -151,6 +151,29 @@ function elminarMensajeErrorDatoDuplicadoDB(){
     };
 };
 
+//FUNCION SPINNER MENSAJE 
+
+function showSpinner(message) {
+    // Crear el elemento spinner
+    const spinner = document.createElement('div');
+    spinner.classList.add('spinner');
+  
+    // Crear el elemento mensaje del spinner
+    const spinnerMessage = document.createElement('div');
+    spinnerMessage.classList.add('spinner-message');
+    spinnerMessage.textContent = message;
+  
+    // Añade el mensaje al elemento spinner
+    spinner.appendChild(spinnerMessage);
+  
+    //  Añade el spinner al cuerpo del documento
+    document.body.appendChild(spinner);
+
+    document.getElementById('myButton').addEventListener('click', function() {
+        showSpinner('Usuario registrado');
+      });
+  };
+
 
 
 
