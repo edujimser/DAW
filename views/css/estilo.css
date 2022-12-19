@@ -22,6 +22,16 @@ body {
   width: 40px;
 }
 
+.iniciarSessionLogin .nav-logo-inicio {
+  height: 35px;
+  width: 35px;
+  margin-right: 10px;
+}
+
+.iniciarSessionLogin{
+  padding-right: 15px;
+  margin-top: 25px;
+}
 
 
 
@@ -30,7 +40,7 @@ body {
 /**  FOOTER  -------------------------------------------------------------------------------------**/
 .texto-footer-snapDog{
   text-align: justify;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 footer button{
