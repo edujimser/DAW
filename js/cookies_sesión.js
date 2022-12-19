@@ -16,7 +16,5 @@ function setCookie(name, value, days) {
 
     //Ejemplo de creación de cookie
     setCookie('session', '12345', 3);
-    //Redirigir a la pagina home
-    window.location.href = '/view.home.php';
     
 };
