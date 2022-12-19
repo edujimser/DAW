@@ -22,6 +22,19 @@ body {
   width: 40px;
 }
 
+/*Ponemos un float left al logo para que se vea a la izquierda del header*/
+header #logo{
+  float: left;
+  overflow: hidden; 
+  padding: 10px;
+}
+
+/*Ponemos un float right al resto del menú para que se vea a la derecha del header*/
+header #menu{
+  float: right;
+  margin-right: 10px;
+  margin-top: 20px;
+}
 
 
 
@@ -37,13 +50,29 @@ footer button{
   color: white;
   background-color: #E2942D;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+/*para que se vea el cursor como clickable cuando se pasa por encima del botón*/
+  cursor: pointer;
+  flex-direction: row;
+  font-size: 27px;
+  border-radius: 50px;
+  border: solid #316fe3;
 }
 
 footer button:hover {
   background-color: #CE7A33;
 }
 
+footer ul li a:hover{
+  color: rgb(0, 0, 0);
+}
 
+/*redes sociles situadas en el footer*/
+#redes{
+  background-color: #64bcece3;
+  padding: 2px;
+ 
+}
 
 /**  LOGGIN  -------------------------------------------------------------------------------------**/
 
@@ -111,6 +140,12 @@ footer button:hover {
   color: rgb(255, 255, 255);
   background-color: #E2942D;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+/*para que se vea el cursor como clickable cuando se pasa por encima del botón*/
+cursor: pointer;
+flex-direction: row;
+font-size: 27px;
+border-radius: 50px;
+border: solid #316fe3;
 }
 
 .registro .contenedor-formulario-registro .formulario-registro button:hover {

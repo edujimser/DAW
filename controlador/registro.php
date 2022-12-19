@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <?php
 
     // INSERSIÓN DE USUARIO FORMULARIO REGISTRO
