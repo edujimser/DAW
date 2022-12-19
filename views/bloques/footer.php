@@ -49,10 +49,10 @@
             Aviso Legales
           </h6>
           <p>
-            <a href="#!" class="text-reset">Cookies</a>
+            <a href="http://127.0.0.1/DAW/views/view.cookies.php" class="text-reset">Cookies</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Datos Personales</a>
+            <a href="http://127.0.0.1/DAW/views/view.datosLegales.php" class="text-reset">Datos Personales</a>
           </p>
           <p>
             <a href="#!" class="text-reset">Términos Legales</a>

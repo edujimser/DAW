@@ -1,0 +1,59 @@
+
+
+/**  COOKIES  -------------------------------------------------------------------------------------**/
+.contenedor-general{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    flex-direction: row;
+    
+  }
+  
+  .contenedor-general .contenedor-general-texto{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    height: 100%;
+    background-color: rgb(224, 180, 34);
+}
+
+.contenedor-general .contenedor-general-texto .container-scroll{ 
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	border: 1px solid rgb(187, 186, 186);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	background-color: rgb(236, 236, 236);
+	padding: 8px;
+}
+
+
+.contenedor-general .contenedor-general-texto .container-scroll .container-texto{ 
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+h3{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+h4{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+p{
+   text-align: justify;
+}
+
+li{
+padding-left: 20px;
+}
