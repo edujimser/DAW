@@ -142,7 +142,48 @@ input[type=number]::-webkit-outer-spin-button {
 }
 input[type=number] { -moz-appearance:textfield; }
 
+/**  CONTACTO  -------------------------------------------------------------------------------------**/
+.contacto{
+  max-width: auto;
+}
+.contenedor-formulario-contacto{
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+	align-content: center;
+  padding-top: 300px;
 
+}
+
+.formulario-contacto{
+  max-width: 800px;
+}
+
+
+.contacto .contenedor-formulario-contacto .formulario-contacto button{
+  color: rgb(255, 255, 255);
+  background-color: #E2942D;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+/*para que se vea el cursor como clickable cuando se pasa por encima del botón*/
+cursor: pointer;
+flex-direction: row;
+font-size: 27px;
+border-radius: 50px;
+border: solid #316fe3;
+}
+
+.contacto .contenedor-formulario-contacto .formulario-contacto button:hover {
+  background-color: #CE7A33;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number] { -moz-appearance:textfield; }
 
 /**  SPINNER  -------------------------------------------------------------------------------------**/
 .spinner {
