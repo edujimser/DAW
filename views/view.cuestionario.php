@@ -1,10 +1,24 @@
+<?php 
+
+require "../controlador/cuestionario.php";
+
+if(isset($_POST["submit"])){
+    global $cuestionario;
+    insertarCuestionario($_POST["vivienda"], $_POST["niños"], $_POST["mascotas"], $_POST["experiencia"], $_POST["ayuda"], $_POST["licencia"], $_POST["actividad"], $_POST["adopcion"],
+    $_POST["agree"]);
+    header("location: ../index.php");
+    exit();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="views/css/estilo.css" type="text/css">
+    <link rel="stylesheet" href="css/estilo.css" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <title>Cuestionario</title>
@@ -13,8 +27,8 @@
     <div class="contenedor-formulario"> 
         <form class="formulario-registro" role="form" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" id="cuestionario">
             <div class="row col-md-6 mb-4 form-outline">
-                <label for="selectVivienda">Seleccione el tipo de vivienda en la que reside habitualmente:</label>
-                <select id="selectVivienda" name="vivienda">
+                <label for="vivienda">Seleccione el tipo de vivienda en la que reside habitualmente:</label>
+                <select id="vivienda" name="vivienda">
                     <option value="" selected>Seleccione el tipo</option>
                     <option value="pisoPeq">Piso hasta 70m</option>
                     <option value="pisoGran">Piso mayor de 70m</option>
@@ -115,15 +129,15 @@
             <div class="row col-md-12 mb-4 form-outline">
                 <label for="adopcion">¿Por qué desea adoptar y no comprar un perro?</label>
                 <div>
-                    <textarea id="adopcion" rows="10" cols="60"></textarea>
+                    <textarea id="adopcion" name="adopcion" rows="10" cols="60"></textarea>
                 </div>
             </div>
             <div class="col-md-12 mb-4 form-outline">
                 <label for="agree">En caso de no poder atenderlo, debe avisar en primer lugar a la protectora. ¿Está de acuerdo?</label>
-                <input type="checkbox" id="agree" value="agree">
+                <input type="checkbox" id="agree" name="agree" value="agree">
             </div>
             <div class="d-flex justify-content-center pt-3">
-                <button type="submit" name="submit" id ="submit" value="registroDatos" class="btn fw-semibold btn-block mb-4"> Guardar Datos </button>
+                <button type="submit" name="submit" id ="submit" value="registroDatos" class="btn fw-semibold btn-block mb-4">Guardar Datos</button>
             </div>
         </form>
     </div>
