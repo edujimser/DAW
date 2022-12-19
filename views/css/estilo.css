@@ -22,19 +22,6 @@ body {
   width: 40px;
 }
 
-/*Ponemos un float left al logo para que se vea a la izquierda del header*/
-header #logo{
-  float: left;
-  overflow: hidden; 
-  padding: 10px;
-}
-
-/*Ponemos un float right al resto del menú para que se vea a la derecha del header*/
-header #menu{
-  float: right;
-  margin-right: 10px;
-  margin-top: 20px;
-}
 
 
 
@@ -43,7 +30,7 @@ header #menu{
 /**  FOOTER  -------------------------------------------------------------------------------------**/
 .texto-footer-snapDog{
   text-align: justify;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 footer button{

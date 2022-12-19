@@ -26,11 +26,11 @@
                 <!-- Collapsible wrapper -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Navbar brand -->
-                    <a class="navbar-brand mt-2 mt-lg-0 ms-4" href="./index.php">
-                        HO<img src="http://127.0.0.1/DAW/views/img/logo.png" class="nav-logo-home" />ME
+                    <a class="navbar-brand mt-2 mt-lg-0 " href="http://127.0.0.1/DAW//index.php">
+                        HO<img src="http://127.0.0.1/DAW/views/img/logo.png" class="nav-logo-home"/>ME
                     </a>
                     <!-- Left links -->
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 me-5">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Adoptantes</a>
                         </li>
@@ -50,8 +50,8 @@
 
                 <!-- Right elements -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./views/view.login.php">Iniciar Sessión</a>
+                    <li class="nav-item fw-bold iniciarSessionLogin">
+                        <a class="nav-link me-5" href="./views/view.login.php"> <img class="nav-logo-inicio" src="http://127.0.0.1/DAW/views/img/huella.png"/>Iniciar Sessión</a>
                     </li>
                 </ul>
                 <div class="d-flex align-items-center">
