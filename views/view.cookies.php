@@ -4,10 +4,9 @@
         <div class="contenedor-general-texto">
             <div class="container-scroll">
                 <div class="container-texto">
-                <h2>AVISO LEGAL</h2>
-                <h3>SNAPDOG LEY DE LOS SERVICIOS DE LA SOCIEDAD DE LA INFORMACIÓN (LSSI)</h3>
-                https://ceporros.com/plantilla-aviso-legal-2021-gratis-actualizada/
-
+                <h2>POLÍTICA DE COOKIES</h2>
+                <h3>SNAPDOG</h3>
+www.snapDog.es
 <p>El acceso a este Sitio Web puede implicar la utilización de cookies. Las cookies son pequeñas cantidades de información que se almacenan en el navegador utilizado por cada Usuario —en los distintos dispositivos que pueda utilizar para navegar— para que el servidor recuerde cierta información que posteriormente y únicamente el servidor que la implementó leerá. Las cookies facilitan la navegación, la hacen más amigable, y no dañan el dispositivo de navegación.<p>
 
 <p>Las cookies son procedimientos automáticos de recogida de información relativa a las preferencias determinadas por el Usuario durante su visita al Sitio Web con el fin de reconocerlo como Usuario, y personalizar su experiencia y el uso del Sitio Web, y pueden también, por ejemplo, ayudar a identificar y resolver errores.</p>

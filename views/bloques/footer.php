@@ -37,7 +37,7 @@
             SnapDog
           </h6>
           <div class="text-center ">
-            <img src="views/img/logo.png" alt="logo">
+            <img src="http://127.0.0.1/DAW/views/img/logo.png" alt="logo">
           </div>
         </div>
         <!-- Grid column -->
@@ -52,13 +52,13 @@
             <a href="http://127.0.0.1/DAW/views/view.cookies.php" class="text-reset">Cookies</a>
           </p>
           <p>
-            <a href="http://127.0.0.1/DAW/views/view.datosLegales.php" class="text-reset">Datos Personales</a>
+            <a href="http://127.0.0.1/DAW/views/view.datosPersonales.php" class="text-reset">Datos Personales</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Términos Legales</a>
+            <a href="http://127.0.0.1/DAW/views/view.terminosLegales.php" class="text-reset">Términos Legales</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Copyright</a>
+            <a href="http://127.0.0.1/DAW/views/view.copyright.php" class="text-reset">Copyright</a>
           </p>
         </div>
         <!-- Grid column -->
