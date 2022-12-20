@@ -51,7 +51,7 @@
                 <!-- Right elements -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item fw-bold iniciarSessionLogin">
-                        <a class="nav-link me-5" href="./views/view.login.php"> <img class="nav-logo-inicio" src="http://127.0.0.1/DAW/views/img/huella.png"/>Iniciar Sessión</a>
+                        <a class="nav-link me-5" href="http://127.0.0.1/DAW/views/view.login.php"> <img class="nav-logo-inicio" src="http://127.0.0.1/DAW/views/img/huella.pngn"/>Iniciar Sessión</a>
                     </li>
                 </ul>
                 <div class="d-flex align-items-center">
