@@ -17,10 +17,18 @@ body {
 
 .nav-logo-home {
   height: 40px;
-  width: 40px;
+  width: 49px;
 }
 
+.nav-logo-inicio-pata{
+  height: 35px;
+  width: 35px;
+  margin-right: 10px;
+}
 
+.nav-logo-inicio{
+  margin-top: 10px;
+}
 
 /**  FOOTER  -------------------------------------------------------------------------------------**/
 .texto-footer-snapDog{

@@ -60,7 +60,7 @@
                             limpiarDatos($_POST['email']),
                             limpiarDatos($_POST['telefono']),
                             limpiarDatos($_POST['CP']),
-                            limpiarDatos($_POST['submit']));
+                            limpiarDatos($_POST['submit']));     
                 };
                 
             };

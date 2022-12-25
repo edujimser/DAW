@@ -51,12 +51,18 @@
                 <!-- Right elements -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item fw-bold iniciarSessionLogin">
-                        <a class="nav-link me-5" href="http://127.0.0.1/DAW/views/view.login.php"> <img class="nav-logo-inicio" src="http://127.0.0.1/DAW/views/img/huella.pngn"/>Iniciar Sessión</a>
+                         <?php  if(!isset($_SESSION['nomUser'])): ?>
+                            <a class="nav-link me-5 nav-logo-inicio " href="http://127.0.0.1/DAW/php/login.php"> <img class="nav-logo-inicio-pata" src="http://127.0.0.1/DAW/views/img/huella.png"/>Iniciar Sessión</a>
+                        <?php  endif; ?>
+                    </li>
+                    <li class="nav-item fw-bold iniciarSessionLogin">
+                        <?php  if(isset($_SESSION['nomUser'])): ?>
+                            <a class="nav-link me-5 nav-logo-inicio " href="http://127.0.0.1/DAW/php/MenuUsuarioHome.php" target="_blank"> <img class="nav-logo-inicio-pata" src="http://127.0.0.1/DAW/views/img/huella.png"/><?php echo $_SESSION['nomUser'] ?></a>
+                        <?php  endif; ?>
                     </li>
                 </ul>
                 <div class="d-flex align-items-center">
                     <!-- Avatar -->
-                        <!-- DESAROLLAR ---------------------------------------------------------------------- -->
                     <!-- Right elements -->
                 </div>
                 <!-- Container wrapper -->

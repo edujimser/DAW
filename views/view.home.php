@@ -1,4 +1,8 @@
 <?php
+    session_start();
+?>
+
+<?php
     require 'views/bloques/nav.php';
 ?>
 

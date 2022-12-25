@@ -12,6 +12,7 @@ let datosFormulario = {
 // -------------------------------------------------------------------------------------------- //
 //EVENTLISTERS 
 eventlisteners();
+
 function eventlisteners(){
     window.addEventListener('DOMContentLoaded', () => {
         submit.disabled = true;
@@ -26,6 +27,7 @@ function eventlisteners(){
 
 
 function validadorCanmpo(e){
+  console.log(e.target);
   console.log(e.target.value);
   datosFormulario[e.target.id] = e.target.value;
   avtivarBoton();
