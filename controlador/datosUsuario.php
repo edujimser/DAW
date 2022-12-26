@@ -1,37 +1,70 @@
 <?php
-// Insertar datos de usuario
-    function insertarDatosUsuario($edad, $estadoCivil, $grupoFamiliar, $estadoProfesional, $metrosVivienda, $tipoVivienda, $profesion, $rentaAnual, $hobbies, $descripcionBusqueda, $descripcionCompañero){
+
+// INSERTAR DATOS USUARIO
+function insertarDatosPersonales($idUser, $edad, $estadoCivil, $profesion, $grupoFamiliar, $metrosVivienda, $tipoVivienda, $estadoProfesional, $rentaAnual, $descripcionBusquedad, $descripcionCompañero, $hobbies, $submit, $remplazar){
             
-        $datosUsuario = [
-            "edad" => $edad,
-            "estadoCivil" => $estadoCivil, 
-            "grupoFamiliar"=>$grupoFamiliar, 
-            "estadoProfesional"=>$estadoProfesional, 
-            "metrosVivienda"=>$metrosVivienda, 
-            "tipoVivienda"=>$tipoVivienda,
-            "profesion"=>$profesion,
-            "rentaAnual"=>$rentaAnual,
-            "hobbies"=>$hobbies,
-            "descripcionBusqueda"=>$descripcionBusqueda,
-            "descripcionCompañero"=>$descripcionCompañero
-        ];
+    $datosPersonales = [
+        "idUser" => $idUser,
+        "edad" => $edad, 
+        "estadoCivil"=>$estadoCivil, 
+        "profesion"=>$profesion, 
+        "grupoFamiliar"=>$grupoFamiliar, 
+        "metrosVivienda"=>$metrosVivienda,
+        "tipoVivienda"=>$tipoVivienda,
+        "estadoProfesional"=>$estadoProfesional,
+        "rentaAnual"=>$rentaAnual,
+        "descripcionBusquedad"=>$descripcionBusquedad,
+        "descripcionCompañero"=>$descripcionCompañero,
+        "hobbies"=>$hobbies,
+        "submit"=>$submit,
+        "remplazar"=>$remplazar
+    ];
 
-        $json = json_encode($datosUsuario);
+    $json = json_encode($datosPersonales);
 
-        $endpoint = "http://" . $_SERVER['HTTP_HOST'] . "/DAW/api/api-registro-login/index.api.php";
-  
-        $curl = curl_init();
+    $endpoint = "http://" . $_SERVER['HTTP_HOST'] . "/DAW/api/api-datosPersonales/index.api.php";
 
-        curl_setopt($curl, CURLOPT_URL, $endpoint);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1 );
-        curl_setopt($curl, CURLOPT_POST, 1);
-        curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-        curl_setopt($curl, CURLOPT_POSTFIELDS, $json);
+    $curl = curl_init();
 
-        curl_exec($curl);
+    curl_setopt($curl, CURLOPT_URL, $endpoint);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1 );
+    curl_setopt($curl, CURLOPT_POST, 1);
+    curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+    curl_setopt($curl, CURLOPT_POSTFIELDS, $json);
 
-        curl_close($curl);
-        
-    };
+    curl_exec($curl);
+
+    curl_close($curl);
+}
+
+
+// OBTENER DATOS USUARIO REGISTRO
+function obtenerDatosUsuario($idUser){
+
+    $datosPersonales = [
+        "idUser"=>$idUser, 
+    ];
+
+    $json = json_encode($datosPersonales);
+
+    $endpoint = "http://" . $_SERVER['HTTP_HOST'] . "/DAW/api/api-datosPersonales/index.api.php";
+
+    $curl = curl_init();
+
+    curl_setopt($curl, CURLOPT_URL, $endpoint);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1 );
+    curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "GET");
+    curl_setopt($curl, CURLOPT_POST, 1);
+    curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+    curl_setopt($curl, CURLOPT_POSTFIELDS, $json);
+
+    $output = curl_exec($curl);
+
+    curl_close($curl);
+
+   $usuario = json_decode($output,true);
+
+   return $usuario;
+};
 
 ?>
