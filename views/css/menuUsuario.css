@@ -28,7 +28,7 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #515151;
+    color: #ffffff;
     text-align: left;
     background-color: #e9edf4;
 }
@@ -141,7 +141,7 @@ h1, .h1 {
     top: 0;
     bottom: 0;
     overflow: auto;
-    background-color: #dbc7ac;
+    background-color: #ffffff;
 }
 
 .dashboard-compact .dashboard-nav {
@@ -171,7 +171,7 @@ h1, .h1 {
 }
 
 .dashboard-nav a {
-    color: #515151;
+    color: #ffffff;
 }
 
 .dashboard-nav a:hover {
@@ -361,7 +361,7 @@ h1, .h1 {
 
 .dashboard-toolbar {
     min-height: 84px;
-    background-color: #dfdfdf;
+    background-color: #ffffff;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;

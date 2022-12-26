@@ -23,18 +23,53 @@
             </header>
 
                 <!-- MENU -->
-                <a href="http://127.0.0.1/DAW/php/MenuUsuarioHome.php" class='dashboard-nav-item <?php if(isset($posicion)): if($posicion == 'Home'): echo ' active';; ?><?php endif; ?> <?php endif; ?>'>
+                    <!-- ACTIVACION COLOR BOTON MENU -->
+                    <?php $url = $_SERVER["REQUEST_URI"];?>
+                         <!-- POSICION HOME -->
+                        <?php if ($url == '/DAW/php/MenuUsuarioHome.php'): $homeActive = 'active'; ?>
+                        <?php elseif($url !== '/DAW/php/MenuUsuarioHome.php'):  $homeActive = 'Noactive';?>
+                        <?php endif; ?>
+                         <!-- POSICION DATOS REGISTRO -->
+                        <?php if ($url == '/DAW/php/MenuUsuarioDatosRegistro.php'): $DatosRegistroActive = 'active'; ?>
+                        <?php elseif($url !== '/DAW/php/MenuUsuarioDatosRegistro.php'):  $DatosRegistroActive = 'Noactive';?>
+                        <?php endif; ?>
+                        <!-- POSICION DATOS PERSOANLES -->
+                        <?php if ($url == '/DAW/php/MenuUsuarioDatosPersonales.php'): $DatosPersonalesActive = 'active'; ?>
+                        <?php elseif($url !== '/DAW/php/MenuUsuarioDatosPersonales.php'):  $DatosPersonalesActive = 'Noactive';?>
+                        <?php endif; ?>
+                        <!-- POSICION TEST PERRUNO -->
+                        <?php if ($url == '/DAW/php/MenuUsuarioTest.php'): $DatosTestActive = 'active'; ?>
+                        <?php elseif($url !== '/DAW/php/MenuUsuarioTest.php'):  $DatosTestActive = 'Noactive';?>
+                        <?php endif; ?>
+
+
+                <a href="http://127.0.0.1/DAW/php/MenuUsuarioHome.php" class='dashboard-nav-item <?php if(isset($homeActive)): echo $homeActive ?> <?php endif; ?>'>
                     <i class="fas fa-tachometer-alt">
                     </i> SnapDog 
                 </a>
             
-                <a href="http://127.0.0.1/DAW/php/MenuUsuarioDatosRegistro.php" class="dashboard-nav-item"><i class="fas fa-file-upload"></i> Datos Registros </a>
+                <a href="http://127.0.0.1/DAW/php/MenuUsuarioDatosRegistro.php" class="dashboard-nav-item <?php if(isset($DatosRegistroActive)): echo $DatosRegistroActive ?> <?php endif; ?>">
+                    <i class="fas fa-file-upload">
+                    </i> Datos Registros 
+                </a>
 
-                <a href="http://127.0.0.1/DAW/php/MenuUsuarioDatosRegistro.php" class="dashboard-nav-item"><i class="fas fa-file-upload"></i>Datos Personales</a>
+                <a href="http://127.0.0.1/DAW/php/MenuUsuarioDatosPersonales.php" class="dashboard-nav-item <?php if(isset($DatosPersonalesActive)): echo $DatosPersonalesActive ?> <?php endif; ?>">
+                    <i class="fas fa-file-upload">   
+                    </i>Datos Personales
+                </a>
 
-                <a href="http://127.0.0.1/DAW/php/MenuUsuarioDatosRegistro.php" class="dashboard-nav-item"><i class="fas fa-file-upload"></i>Test</a>
+                <a href="http://127.0.0.1/DAW/php/MenuUsuarioTest.php" class="dashboard-nav-item <?php if(isset($DatosTestActive)): echo $DatosTestActive ?> <?php endif; ?>">
+                    <i class="fas fa-file-upload">   
+                    </i>Test Perruno
+                </a>
                 
-                <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-photo-video"></i> Media </a>
+                <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle">
+                    <i class="fas fa-photo-video"> 
+                    </i> Otras cosas
+                </a>
+
+                <!-- MENU -->
+
                     <div class='dashboard-nav-dropdown-menu'><a href="#" class="dashboard-nav-dropdown-item">All</a><a href="#" class="dashboard-nav-dropdown-item">Recent</a><a href="#" class="dashboard-nav-dropdown-item">Images</a><a href="#" class="dashboard-nav-dropdown-item">Video</a></div>
                 </div>
                 

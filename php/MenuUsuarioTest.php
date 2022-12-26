@@ -4,5 +4,5 @@
 require '../views/bloques/navUsuario.php';
 
 
-require '../views/viewMenuUsuarioDatosRegistro.php';
+require '../views/viewMenuUsuarioTest.php';
 ?>
