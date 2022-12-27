@@ -8,6 +8,21 @@ require '../controlador/datosUsuario.php';
 // COMPROBAR  EXISTENCIA USUARIO
 $existe = obtenerDatosUsuario($_SESSION['idUser']);
 
+//RELLENAR DATOS DE FORMULARIO SI EXISTEN OTROS ANTES
+if (!empty($existe)) {
+    $edad = $existe[0]['edad'];
+    $estadoCivil = $existe[0]['estadoCivil'];
+    $profesion = $existe[0]['profesion'];
+    $grupoFamiliar = $existe[0]['grupoFamiliar'];
+    $metrosVivienda = $existe[0]['metrosVivienda'];
+    $tipoVivienda = $existe[0]['tipoVivienda'];
+    $estadoProfesional = $existe[0]['estadoProfesional'];
+    $rentaAnual = $existe[0]['rentaAnual'];
+    $descripcionBusquedad = $existe[0]['descripcionBusquedad'];
+    $descripcionCompañero = $existe[0]['descripcionCompañero'];
+    $hobbies = $existe[0]['hobbies'];
+}
+
 // ENVIO CONTROLADOR FORMULARIO
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['submit'] == 'datosPersonales')) {
 
@@ -40,6 +55,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['submit'] == 'datosPer
                 limpiarDatos($_POST['submit']),
                 false //remplazar
             );
+
+            //RECARGAR PAGINA PARA RELLENAR DATOS
+            header("Location: http://127.0.0.1/DAW/php/MenuUsuarioDatosPersonales.php");
         };
     } else {
         // REMPLAZAR
@@ -70,6 +88,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['submit'] == 'datosPer
                 limpiarDatos($_POST['submit']),
                 true //remplazar
             );
+
+
+            //RECARGAR PAGINA PARA RELLENAR DATOS
+            header("Location: http://127.0.0.1/DAW/php/MenuUsuarioDatosPersonales.php");
+            
         };
     }
 };
