@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://127.0.0.1/DAW/views/css/estilo.css" type="text/css">
+    <link rel="stylesheet" href="http://127.0.0.1/DAW/views/css/sweetalert2.min.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <title>Trabaja con nosotros</title>
+</head>
+<body>
+	<div class="form-container">
+		<form name="frmContact" id="" frmContact"" method="post" action="">
+
+			<div class="input-row">
+				<label style="padding-top: 20px;">Nombre</label> <span
+					id="userName-info" class="info"></span><br /> <input type="text"
+					class="input-field" name="userName" id="userName" />
+			</div>
+			<div class="input-row">
+				<label>Email</label> <span id="userEmail-info" class="info"></span><br />
+				<input type="text" class="input-field" name="userEmail"
+					id="userEmail" />
+			</div>
+			<div class="input-row">
+				<label>Asunto</label> <span id="subject-info" class="info"></span><br />
+				<input type="text" class="input-field" name="subject" id="subject" />
+			</div>
+			<div class="input-row">
+				<label>Mensaje </label> <span id="userMessage-info" class="info"></span><br />
+				<textarea name="content" id="content" class="input-field" cols="60"
+					rows="6"></textarea>
+			</div>
+			<div>
+				<input type="submit" name="send" class="btn-submit" value="Send" />
+
+				<div id="statusMessage"> 
+                        <?php
+                        if (! empty($message)) {
+                            ?>
+                            <p class='<?php echo $type; ?>Message'><?php echo $message; ?></p>
+                        <?php
+                        }
+                        ?>
+                    </div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
