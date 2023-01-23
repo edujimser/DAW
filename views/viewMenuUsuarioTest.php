@@ -15,62 +15,62 @@
 
                                     <div class="col mb-4">
                                         <div class="form-outline">
-                                            <input type="text" id="q1" name="q1" class="form-control form-control-lg" />
+                                            <input type="number" id="q1" name="q1" value="<?php if(isset($q1)): echo $q1;?><?php endif;?>" class="form-control form-control-lg" />
                                             <label class="form-label" for="q1">Pregunta 1</label>
                                         </div>
                                     </div>
 
                                     <div class="col mb-4">
                                         <div class="form-outline">
-                                            <input type="text" id="q2" name="q2" class="form-control form-control-lg" />
+                                            <input type="number" id="q2" name="q2" value="<?php if(isset($q2)): echo $q2;?><?php endif;?>" class="form-control form-control-lg" />
                                             <label class="form-label" for="q2">Pregunta 2</label>
                                         </div>
                                     </div>
                                     <div class="col mb-4">
                                         <div class="form-outline">
-                                            <input type="text" id="q3" name="q3" class="form-control form-control-lg" />
+                                            <input type="number" id="q3" name="q3" value="<?php if(isset($q3)): echo $q3;?><?php endif;?>" class="form-control form-control-lg" />
                                             <label class="form-label" for="q3">Pregunta 3</label>
                                         </div>
                                     </div>
                                     <div class="col mb-4">
                                         <div class="form-outline">
-                                            <input type="text" id="q4" name="q4" class="form-control form-control-lg" />
+                                            <input type="number" id="q4" name="q4" value="<?php if(isset($q4)): echo $q4;?><?php endif;?>" class="form-control form-control-lg" />
                                             <label class="form-label" for="q4">Pregunta 4</label>
                                         </div>
                                     </div>
                                     <div class="col mb-4">
                                         <div class="form-outline">
-                                            <input type="text" id="q5" name="q5"  class="form-control form-control-lg" />
+                                            <input type="number" id="q5" name="q5" value="<?php if(isset($q5)): echo $q5;?><?php endif;?>" class="form-control form-control-lg" />
                                             <label class="form-label" for="q5">Pregunta 5</label>
                                         </div>
                                     </div>
                                     <div class="col mb-4">
                                         <div class="form-outline">
-                                            <input type="text" id="q6" name="q6"  class="form-control form-control-lg" />
+                                            <input type="number" id="q6" name="q6" value="<?php if(isset($q6)): echo $q6;?><?php endif;?>" class="form-control form-control-lg" />
                                             <label class="form-label" for="q6">Pregunta 6</label>
                                         </div>
                                     </div>
                                     <div class="col mb-4">
                                         <div class="form-outline">
-                                            <input type="text" id="q7" name="q7" class="form-control form-control-lg" />
+                                            <input type="number" id="q7" name="q7" value="<?php if(isset($q7)): echo $q7;?><?php endif;?>" class="form-control form-control-lg" />
                                             <label class="form-label" for="q7">Pregunta 7</label>
                                         </div>
                                     </div>
                                     <div class="col mb-4">
                                         <div class="form-outline">
-                                            <input type="text" id="q8" name="q8" class="form-control form-control-lg" />
+                                            <input type="number" id="q8" name="q8" value="<?php if(isset($q8)): echo $q8;?><?php endif;?>" class="form-control form-control-lg" />
                                             <label class="form-label" for="q8">Pregunta 8</label>
                                         </div>
                                     </div>
                                     <div class="col mb-4">
                                         <div class="form-outline">
-                                            <input type="text" id="q9" name="q9" class="form-control form-control-lg" />
+                                            <input type="number" id="q9" name="q9" value="<?php if(isset($q9)): echo $q9;?><?php endif;?>" class="form-control form-control-lg" />
                                             <label class="form-label" for="q9">Pregunta 9</label>
                                         </div>
                                     </div>
                                     <div class="col mb-4">
                                         <div class="form-outline">
-                                            <input type="text" id="q10" name="q10" class="form-control form-control-lg" />
+                                            <input type="number" id="q10" name="q10" value="<?php if(isset($q10)): echo $q10;?><?php endif;?>" class="form-control form-control-lg" />
                                             <label class="form-label" for="q10">Pregunta 10</label>
                                         </div>
                                     </div>
