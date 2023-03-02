@@ -9,12 +9,12 @@ function insersionDatos()
     $datos = json_decode(file_get_contents('php://input'), true);
 
     // INSERSIÓN DEL REGISTRO DEL USUARIO
-    if ($datos['estado'] == false) {
+    if ($datos['estado'] == 'false') {
         if ($datos['submit'] == 'datosTest') {
-            $sql = "INSERT INTO test(idUser, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+            $sql = "INSERT INTO test(idUser, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, tipoPerro) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
             $stm = $conexion->prepare($sql);
             $stm->bind_param(
-                'issssssssss',
+                'isssssssssss',
                 $datos["idUser"],
                 $datos["q1"],
                 $datos["q2"],
@@ -26,6 +26,7 @@ function insersionDatos()
                 $datos["q8"],
                 $datos["q9"],
                 $datos["q10"],
+                $datos["tipoPerro"]
             );
 
             $resultado = $stm->execute();
@@ -38,7 +39,7 @@ function insersionDatos()
         };
     }else{
         if ($datos['submit'] == 'datosTest') {
-            $sql = "UPDATE test SET q1 = ?, q2 = ?, q3 = ?, q4 = ?, q5 = ?, q6 = ?, q7 = ?, q8 = ?, q9 = ?, q10 = ? WHERE idUser = ?";
+            $sql = "UPDATE test SET q1 = ?, q2 = ?, q3 = ?, q4 = ?, q5 = ?, q6 = ?, q7 = ?, q8 = ?, q9 = ?, q10 = ?, tipoPerro = ? WHERE idUser = ?";
             $stm = $conexion->prepare($sql);
             $stm->bind_param(
                 'ssssssssssi',
@@ -52,6 +53,7 @@ function insersionDatos()
                 $datos["q8"],
                 $datos["q9"],
                 $datos["q10"],
+                $datos["resultadoTipoPerro"],
                 $datos["idUser"]
             );
 

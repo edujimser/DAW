@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['submit'] == 'datosTes
         //PARA PROGRAMA PARA SPINER
 
         // COMPROBAR EXISTENCIA PARA LA API
-        if (empty($existe)) {
+        if (empty($existe)) {  //INSERTAR
             $datosTest = [];
             $datosTest  = insertarTest(
                 limpiarDatos($_SESSION['idUser']),
@@ -55,9 +55,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['submit'] == 'datosTes
                 limpiarDatos($_POST['q9']),
                 limpiarDatos($_POST['q10']),
                 limpiarDatos($_POST['submit']),
-                false
-            );
-        } else {
+                'false',
+                $tipoPerro = ($resultadoTipoPerro = (obtenerDatosTipoPerro( //TIPO PERRO
+                                    (int)$_POST['q1'] +
+                                    (int)$_POST['q2'] +
+                                    (int)$_POST['q3'] +
+                                    (int)$_POST['q4'] +
+                                    (int)$_POST['q5'] +
+                                    (int)$_POST['q6'] +
+                                    (int)$_POST['q7'] +
+                                    (int)$_POST['q8'] +
+                                    (int)$_POST['q9'] +
+                                    (int)$_POST['q10'])))['0']['tipoPerro']                       
+                ); 
+        } else { //ACTUALIZAR
             $datosTest = [];
             $datosTest  = insertarTest(
                 limpiarDatos($_SESSION['idUser']),
@@ -72,43 +83,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['submit'] == 'datosTes
                 limpiarDatos($_POST['q9']),
                 limpiarDatos($_POST['q10']),
                 limpiarDatos($_POST['submit']),
-                true
+                true,
+                $resultadoTipoPerro = obtenerDatosTipoPerro( //TIPO PERRO
+                    (int)$_POST['q1'] +
+                    (int)$_POST['q2'] +
+                    (int)$_POST['q3'] +
+                    (int)$_POST['q4'] +
+                    (int)$_POST['q5'] +
+                    (int)$_POST['q6'] +
+                    (int)$_POST['q7'] +
+                    (int)$_POST['q8'] +
+                    (int)$_POST['q9'] +
+                    (int)$_POST['q10'])                       
             );
         };
 
         //RECARGAR PAGINA PARA RELLENAR DATOS
-        header("Location: http://127.0.0.1/DAW/php/MenuUsuarioTest.php");
+        //header("Location: http://127.0.0.1/DAW/php/MenuUsuarioTest.php");
     };
-}
-
-
-// TEST PERRO 
-$datoTestParaSuma = obtenerDatos($_SESSION['idUser']);
-    //SUMATORIO
-    if (!empty($datoTestParaSuma)) {
-        $sumatorioRespuesta =
-            (int)$datoTestParaSuma[0]['q1'] +
-            (int)$datoTestParaSuma[0]['q2'] +
-            (int)$datoTestParaSuma[0]['q3'] +
-            (int)$datoTestParaSuma[0]['q4'] +
-            (int)$datoTestParaSuma[0]['q5'] +
-            (int)$datoTestParaSuma[0]['q6'] +
-            (int)$datoTestParaSuma[0]['q7'] +
-            (int)$datoTestParaSuma[0]['q8'] +
-            (int)$datoTestParaSuma[0]['q9'] +
-            (int)$datoTestParaSuma[0]['q10'];
-
-            //ENVIAR DATOS AL CONTROLADOR
-            $resultadoTipoPerro = obtenerDatosTipoPerro($sumatorioRespuesta);
-            print_r($resultadoTipoPerro);
-    };
-
-  
-    
-
-
-
-
+};
 
 require '../views/viewMenuUsuarioTest.php';
 ?>
