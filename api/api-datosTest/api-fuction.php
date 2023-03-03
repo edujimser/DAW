@@ -42,7 +42,7 @@ function insersionDatos()
             $sql = "UPDATE test SET q1 = ?, q2 = ?, q3 = ?, q4 = ?, q5 = ?, q6 = ?, q7 = ?, q8 = ?, q9 = ?, q10 = ?, tipoPerro = ? WHERE idUser = ?";
             $stm = $conexion->prepare($sql);
             $stm->bind_param(
-                'ssssssssssi',
+                'sssssssssssi',
                 $datos["q1"],
                 $datos["q2"],
                 $datos["q3"],
@@ -53,7 +53,7 @@ function insersionDatos()
                 $datos["q8"],
                 $datos["q9"],
                 $datos["q10"],
-                $datos["resultadoTipoPerro"],
+                $datos["tipoPerro"],
                 $datos["idUser"]
             );
 

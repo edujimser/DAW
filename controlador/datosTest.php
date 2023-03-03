@@ -5,7 +5,7 @@ function insertarTest($idUser ,$q1, $q2, $q3, $q4, $q5, $q6, $q7, $q8, $q9, $q10
             
     $datosTest = [
         "idUser" => $idUser,
-        "q1" => $q1, 
+        "q1"=>$q1, 
         "q2"=>$q2, 
         "q3"=>$q3, 
         "q4"=>$q4, 
@@ -21,7 +21,6 @@ function insertarTest($idUser ,$q1, $q2, $q3, $q4, $q5, $q6, $q7, $q8, $q9, $q10
     ];
 
     $json = json_encode($datosTest);
-    print_r($json);
     $endpoint = "http://" . $_SERVER['HTTP_HOST'] . "/DAW/api/api-datosTest/index.api.php";
 
     $curl = curl_init();

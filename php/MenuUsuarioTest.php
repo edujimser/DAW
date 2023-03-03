@@ -83,23 +83,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['submit'] == 'datosTes
                 limpiarDatos($_POST['q9']),
                 limpiarDatos($_POST['q10']),
                 limpiarDatos($_POST['submit']),
-                true,
-                $resultadoTipoPerro = obtenerDatosTipoPerro( //TIPO PERRO
-                    (int)$_POST['q1'] +
-                    (int)$_POST['q2'] +
-                    (int)$_POST['q3'] +
-                    (int)$_POST['q4'] +
-                    (int)$_POST['q5'] +
-                    (int)$_POST['q6'] +
-                    (int)$_POST['q7'] +
-                    (int)$_POST['q8'] +
-                    (int)$_POST['q9'] +
-                    (int)$_POST['q10'])                       
-            );
+                'true',
+                $tipoPerro = ($resultadoTipoPerro = (obtenerDatosTipoPerro( //TIPO PERRO
+                                    (int)$_POST['q1'] +
+                                    (int)$_POST['q2'] +
+                                    (int)$_POST['q3'] +
+                                    (int)$_POST['q4'] +
+                                    (int)$_POST['q5'] +
+                                    (int)$_POST['q6'] +
+                                    (int)$_POST['q7'] +
+                                    (int)$_POST['q8'] +
+                                    (int)$_POST['q9'] +
+                                    (int)$_POST['q10'])))['0']['tipoPerro']                       
+                ); 
         };
 
         //RECARGAR PAGINA PARA RELLENAR DATOS
-        //header("Location: http://127.0.0.1/DAW/php/MenuUsuarioTest.php");
+        header("Location: http://127.0.0.1/DAW/php/MenuUsuarioTest.php");
     };
 };
 
