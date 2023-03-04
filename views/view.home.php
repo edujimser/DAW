@@ -38,65 +38,140 @@ require_once './php/home.php';
     </header>
 
     <div class="row">
-      <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
-        <div class="card w-100 my-2 shadow-2-strong">
-          <img src="http://127.0.0.1/DAW/views/img/user.png" class="card-img-top" style="aspect-ratio: 1 / 1" />
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title"><?php if(isset($datosUsuarios[$indiceArrayInicio - 1]['nomUser'])):?> <?php $datosUsuarios[$indiceArrayInicio-1]['nomUser']?> <?php endif; ?> </h5>
-            <p class="card-text">Descripción usuario 1</p>
-            <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
-              <a href="#!" class="btn botonConoceme shadow-0 me-1">Conóceme</a>
+      <?php if (isset($datosUsuarios[$indiceArrayInicio])) : ?>
+        <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+          <div class="card w-100 my-2 shadow-2-strong">
+            <img src="http://127.0.0.1/DAW/views/img/user.png" class="card-img-top" style="aspect-ratio: 1 / 1" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"><?php if (isset($datosUsuarios[$indiceArrayInicio]['nomUser'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio]['nomUser'] ?> <?php endif; ?> </h5>
+              <p class="card-text"><?php if (isset($datosUsuarios[$indiceArrayInicio]['nombre'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio]['nombre'] ?> <?php endif; ?> <?php if (isset($datosUsuarios[$indiceArrayInicio]['apellido1'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio]['apellido1'] ?> <?php endif; ?> <?php if (isset($datosUsuarios[$indiceArrayInicio]['apellido2'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio]['apellido2'] ?> <?php endif; ?></p>
+              <p class="card-text"><?php if (isset($datosUsuarios[$indiceArrayInicio]['descripcionCompañero'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio]['descripcionCompañero'] ?> <?php endif; ?> </p>
+              <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                <a href="#!" class="btn botonConoceme shadow-0 me-1">Conóceme</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
-        <div class="card w-100 my-2 shadow-2-strong">
-          <img src="http://127.0.0.1/DAW/views/img/user.png" class="card-img-top" style="aspect-ratio: 1 / 1" />
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Usuario 1</h5>
-            <p class="card-text">Descripción usuario 1</p>
-            <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
-              <a href="#!" class="btn botonConoceme shadow-0 me-1">Conóceme</a>
+      <?php endif; ?>
+      <?php if (isset($datosUsuarios[$indiceArrayInicio + 1])) : ?>
+        <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+          <div class="card w-100 my-2 shadow-2-strong">
+            <img src="http://127.0.0.1/DAW/views/img/user.png" class="card-img-top" style="aspect-ratio: 1 / 1" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"><?php if (isset($datosUsuarios[$indiceArrayInicio + 1]['nomUser'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 1]['nomUser'] ?> <?php endif; ?> </h5>
+              <p class="card-text"><?php if (isset($datosUsuarios[$indiceArrayInicio + 1]['nombre'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 1]['nombre'] ?> <?php endif; ?> <?php if (isset($datosUsuarios[$indiceArrayInicio + 1]['apellido1'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 1]['apellido1'] ?> <?php endif; ?> <?php if (isset($datosUsuarios[$indiceArrayInicio + 1]['apellido2'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 1]['apellido2'] ?> <?php endif; ?></p>
+              <p class="card-text"><?php if (isset($datosUsuarios[$indiceArrayInicio + 1]['descripcionCompañero'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 1]['descripcionCompañero'] ?> <?php endif; ?> </p>
+              <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                <a href="#!" class="btn botonConoceme shadow-0 me-1">Conóceme</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
-        <div class="card w-100 my-2 shadow-2-strong">
-          <img src="http://127.0.0.1/DAW/views/img/user.png" class="card-img-top" style="aspect-ratio: 1 / 1" />
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Usuario1</h5>
-            <p class="card-text">Descripción usuario 1</p>
-            <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
-              <a href="#!" class="btn botonConoceme shadow-0 me-1">Conóceme</a>
+      <?php endif; ?>
+      <?php if (isset($datosUsuarios[$indiceArrayInicio + 2])) : ?>
+        <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+          <div class="card w-100 my-2 shadow-2-strong">
+            <img src="http://127.0.0.1/DAW/views/img/user.png" class="card-img-top" style="aspect-ratio: 1 / 1" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"><?php if (isset($datosUsuarios[$indiceArrayInicio + 2]['nomUser'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 2]['nomUser'] ?> <?php endif; ?> </h5>
+              <p class="card-text"><?php if (isset($datosUsuarios[$indiceArrayInicio + 2]['nombre'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 2]['nombre'] ?> <?php endif; ?> <?php if (isset($datosUsuarios[$indiceArrayInicio + 2]['apellido1'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 2]['apellido1'] ?> <?php endif; ?> <?php if (isset($datosUsuarios[$indiceArrayInicio + 2]['apellido2'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 2]['apellido2'] ?> <?php endif; ?></p>
+              <p class="card-text"><?php if (isset($datosUsuarios[$indiceArrayInicio + 2]['descripcionCompañero'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 2]['descripcionCompañero'] ?> <?php endif; ?> </p>
+              <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                <a href="#!" class="btn botonConoceme shadow-0 me-1">Conóceme</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
-        <div class="card w-100 my-2 shadow-2-strong">
-          <img src="http://127.0.0.1/DAW/views/img/user.png" class="card-img-top" style="aspect-ratio: 1 / 1" />
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Usuario1</h5>
-            <p class="card-text">Descripción usuario 1</p>
-            <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
-              <a href="#!" class="btn botonConoceme shadow-0 me-1">Conóceme</a>
+      <?php endif; ?>
+      <?php if (isset($datosUsuarios[$indiceArrayInicio + 3])) : ?>
+        <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+          <div class="card w-100 my-2 shadow-2-strong">
+            <img src="http://127.0.0.1/DAW/views/img/user.png" class="card-img-top" style="aspect-ratio: 1 / 1" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"><?php if (isset($datosUsuarios[$indiceArrayInicio + 3]['nomUser'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 3]['nomUser'] ?> <?php endif; ?> </h5>
+              <p class="card-text"><?php if (isset($datosUsuarios[$indiceArrayInicio + 3]['nombre'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 3]['nombre'] ?> <?php endif; ?> <?php if (isset($datosUsuarios[$indiceArrayInicio + 3]['apellido1'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 3]['apellido1'] ?> <?php endif; ?> <?php if (isset($datosUsuarios[$indiceArrayInicio + 3]['apellido2'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 3]['apellido2'] ?> <?php endif; ?></p>
+              <p class="card-text"><?php if (isset($datosUsuarios[$indiceArrayInicio + 3]['descripcionCompañero'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 3]['descripcionCompañero'] ?> <?php endif; ?> </p>
+              <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                <a href="#!" class="btn botonConoceme shadow-0 me-1">Conóceme</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      <?php endif; ?>
+    </div>
+
+    <div class="row">
+      <?php if (isset($datosUsuarios[$indiceArrayInicio + 4])) : ?>
+        <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+          <div class="card w-100 my-2 shadow-2-strong">
+            <img src="http://127.0.0.1/DAW/views/img/user.png" class="card-img-top" style="aspect-ratio: 1 / 1" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"><?php if (isset($datosUsuarios[$indiceArrayInicio + 4]['nomUser'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 4]['nomUser'] ?> <?php endif; ?> </h5>
+              <p class="card-text"><?php if (isset($datosUsuarios[$indiceArrayInicio + 4]['nombre'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 4]['nombre'] ?> <?php endif; ?> <?php if (isset($datosUsuarios[$indiceArrayInicio + 4]['apellido1'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 4]['apellido1'] ?> <?php endif; ?> <?php if (isset($datosUsuarios[$indiceArrayInicio + 4]['apellido2'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 4]['apellido2'] ?> <?php endif; ?></p>
+              <p class="card-text"><?php if (isset($datosUsuarios[$indiceArrayInicio + 4]['descripcionCompañero'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 4]['descripcionCompañero'] ?> <?php endif; ?> </p>
+              <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                <a href="#!" class="btn botonConoceme shadow-0 me-1">Conóceme</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      <?php endif; ?>
+      <?php if (isset($datosUsuarios[$indiceArrayInicio + 5])) : ?>
+        <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+          <div class="card w-100 my-2 shadow-2-strong">
+            <img src="http://127.0.0.1/DAW/views/img/user.png" class="card-img-top" style="aspect-ratio: 1 / 1" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"><?php if (isset($datosUsuarios[$indiceArrayInicio + 5]['nomUser'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 5]['nomUser'] ?> <?php endif; ?> </h5>
+              <p class="card-text"><?php if (isset($datosUsuarios[$indiceArrayInicio + 5]['nombre'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 5]['nombre'] ?> <?php endif; ?> <?php if (isset($datosUsuarios[$indiceArrayInicio + 5]['apellido1'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 5]['apellido1'] ?> <?php endif; ?> <?php if (isset($datosUsuarios[$indiceArrayInicio + 5]['apellido2'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 5]['apellido2'] ?> <?php endif; ?></p>
+              <p class="card-text"><?php if (isset($datosUsuarios[$indiceArrayInicio + 5]['descripcionCompañero'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 5]['descripcionCompañero'] ?> <?php endif; ?> </p>
+              <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                <a href="#!" class="btn botonConoceme shadow-0 me-1">Conóceme</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      <?php endif; ?>
+      <?php if (isset($datosUsuarios[$indiceArrayInicio + 6 ])) : ?>
+        <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+          <div class="card w-100 my-2 shadow-2-strong">
+            <img src="http://127.0.0.1/DAW/views/img/user.png" class="card-img-top" style="aspect-ratio: 1 / 1" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"><?php if (isset($datosUsuarios[$indiceArrayInicio + 6]['nomUser'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 6]['nomUser'] ?> <?php endif; ?> </h5>
+              <p class="card-text"><?php if (isset($datosUsuarios[$indiceArrayInicio + 6]['nombre'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 6]['nombre'] ?> <?php endif; ?> <?php if (isset($datosUsuarios[$indiceArrayInicio + 6]['apellido1'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 6]['apellido1'] ?> <?php endif; ?> <?php if (isset($datosUsuarios[$indiceArrayInicio + 6]['apellido2'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 6]['apellido2'] ?> <?php endif; ?></p>
+              <p class="card-text"><?php if (isset($datosUsuarios[$indiceArrayInicio + 6]['descripcionCompañero'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 6]['descripcionCompañero'] ?> <?php endif; ?> </p>
+              <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                <a href="#!" class="btn botonConoceme shadow-0 me-1">Conóceme</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      <?php endif; ?>
+      <?php if (isset($datosUsuarios[$indiceArrayInicio + 7 ])) : ?>
+        <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+          <div class="card w-100 my-2 shadow-2-strong">
+            <img src="http://127.0.0.1/DAW/views/img/user.png" class="card-img-top" style="aspect-ratio: 1 / 1" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"><?php if (isset($datosUsuarios[$indiceArrayInicio + 7]['nomUser'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 7]['nomUser'] ?> <?php endif; ?> </h5>
+              <p class="card-text"><?php if (isset($datosUsuarios[$indiceArrayInicio + 7]['nombre'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 7]['nombre'] ?> <?php endif; ?> <?php if (isset($datosUsuarios[$indiceArrayInicio + 7]['apellido1'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 7]['apellido1'] ?> <?php endif; ?> <?php if (isset($datosUsuarios[$indiceArrayInicio + 7]['apellido2'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 7]['apellido2'] ?> <?php endif; ?></p>
+              <p class="card-text"><?php if (isset($datosUsuarios[$indiceArrayInicio + 7]['descripcionCompañero'])) : ?> <?php echo $datosUsuarios[$indiceArrayInicio + 7]['descripcionCompañero'] ?> <?php endif; ?> </p>
+              <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                <a href="#!" class="btn botonConoceme shadow-0 me-1">Conóceme</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      <?php endif; ?>
     </div>
 
     <!-- Paginacion -->
     <div class="paginacion">
-                <?php if($pagina_actual < $num_paginas): ?>
-                    <a href="index.php?p=<?php echo $pagina_actual + 1 ?>" class="derecha">Pagina Siguiente <i class="fa fa-long-arrow-right"></i></a>
-                <?php endif; ?>
-                <?php if($pagina_actual > 1 && $pagina_actual <= $num_paginas): ?>
-                    <a href="index.php?p=<?php echo $pagina_actual - 1 ?>" class="izquierda"><i class="fa fa-long-arrow-left"></i> Pagina Anterior</a>
-                <?php endif; ?> 
-            </div>
+      <?php if ($pagina_actual < $num_paginas) : ?>
+        <a href="index.php?p=<?php echo $pagina_actual + 1 ?>" class="derecha">Pagina Siguiente <i class="fa fa-long-arrow-right"></i></a>
+      <?php endif; ?>
+      <?php if ($pagina_actual > 1 && $pagina_actual <= $num_paginas) : ?>
+        <a href="index.php?p=<?php echo $pagina_actual - 1 ?>" class="izquierda"><i class="fa fa-long-arrow-left"></i> Pagina Anterior</a>
+      <?php endif; ?>
+    </div>
   </div>
 </section>
 <!-- Adoptantes -->
@@ -183,7 +258,7 @@ require_once './php/home.php';
       </div>
 
       <!--PAGINACION -->
-      
+
     </div>
 
   </div>
