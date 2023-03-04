@@ -42,7 +42,7 @@ require_once './php/home.php';
         <div class="card w-100 my-2 shadow-2-strong">
           <img src="http://127.0.0.1/DAW/views/img/user.png" class="card-img-top" style="aspect-ratio: 1 / 1" />
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Usuario1</h5>
+            <h5 class="card-title"><?php if(isset($datosUsuarios[$indiceArrayInicio - 1]['nomUser'])):?> <?php $datosUsuarios[$indiceArrayInicio-1]['nomUser']?> <?php endif; ?> </h5>
             <p class="card-text">Descripción usuario 1</p>
             <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
               <a href="#!" class="btn botonConoceme shadow-0 me-1">Conóceme</a>
@@ -54,7 +54,7 @@ require_once './php/home.php';
         <div class="card w-100 my-2 shadow-2-strong">
           <img src="http://127.0.0.1/DAW/views/img/user.png" class="card-img-top" style="aspect-ratio: 1 / 1" />
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Usuario1</h5>
+            <h5 class="card-title">Usuario 1</h5>
             <p class="card-text">Descripción usuario 1</p>
             <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
               <a href="#!" class="btn botonConoceme shadow-0 me-1">Conóceme</a>
@@ -88,56 +88,6 @@ require_once './php/home.php';
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
-        <div class="card w-100 my-2 shadow-2-strong">
-          <img src="http://127.0.0.1/DAW/views/img/user.png" class="card-img-top" style="aspect-ratio: 1 / 1" />
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Usuario1</h5>
-            <p class="card-text">Descripción usuario 1</p>
-            <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
-              <a href="#!" class="btn botonConoceme shadow-0 me-1">Conóceme</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
-        <div class="card w-100 my-2 shadow-2-strong">
-          <img src="http://127.0.0.1/DAW/views/img/user.png" class="card-img-top" style="aspect-ratio: 1 / 1" />
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Usuario1</h5>
-            <p class="card-text">Descripción usuario 1</p>
-            <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
-              <a href="#!" class="btn botonConoceme shadow-0 me-1">Conóceme</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
-        <div class="card w-100 my-2 shadow-2-strong">
-          <img src="http://127.0.0.1/DAW/views/img/user.png" class="card-img-top" style="aspect-ratio: 1 / 1" />
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Usuario1</h5>
-            <p class="card-text">Descripción usuario 1</p>
-            <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
-              <a href="#!" class="btn botonConoceme shadow-0 me-1">Conóceme</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
-        <div class="card w-100 my-2 shadow-2-strong">
-          <img src="http://127.0.0.1/DAW/views/img/user.png" class="card-img-top" style="aspect-ratio: 1 / 1" />
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Usuario1</h5>
-            <p class="card-text">Descripción usuario 1</p>
-            <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
-              <a href="#!" class="btn botonConoceme shadow-0 me-1">Conóceme</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- Paginacion -->
     <div class="paginacion">
                 <?php if($pagina_actual < $num_paginas): ?>
