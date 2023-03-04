@@ -41,6 +41,10 @@
                         <?php if ($url == '/DAW/php/MenuUsuarioTest.php'): $DatosTestActive = 'active'; ?>
                         <?php elseif($url !== '/DAW/php/MenuUsuarioTest.php'):  $DatosTestActive = 'Noactive';?>
                         <?php endif; ?>
+                        <!-- POSICION IMAGEN -->
+                        <?php if ($url == '/DAW/php/MenuUsuarioImagen.php'): $DatosImagenActive = 'active'; ?>
+                        <?php elseif($url !== '/DAW/php/MenuUsuarioImagen.php'):  $DatosImagenActive = 'Noactive';?>
+                        <?php endif; ?>
 
 
                 <a href="http://127.0.0.1/DAW/php/MenuUsuarioHome.php" class='dashboard-nav-item <?php if(isset($homeActive)): echo $homeActive ?> <?php endif; ?>'>
@@ -62,14 +66,15 @@
                     <i class="fas fa-file-upload">   
                     </i>Test Perruno
                 </a>
-                
-                <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle">
-                    <i class="fas fa-photo-video"> 
-                    </i> Otras cosas
-                </a>
 
+                <a href="http://127.0.0.1/DAW/php/MenuUsuarioImagen.php" class="dashboard-nav-item <?php if(isset($DatosImagenActive)): echo $DatosImagenActive ?> <?php endif; ?>">
+                    <i class="fas fa-file-upload">   
+                    </i>Imagen Usuario
+                </a>
+                
                 <!-- MENU -->
 
+                <div class='dashboard-nav-dropdown'>
                     <div class='dashboard-nav-dropdown-menu'><a href="#" class="dashboard-nav-dropdown-item">All</a><a href="#" class="dashboard-nav-dropdown-item">Recent</a><a href="#" class="dashboard-nav-dropdown-item">Images</a><a href="#" class="dashboard-nav-dropdown-item">Video</a></div>
                 </div>
                 

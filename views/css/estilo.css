@@ -236,3 +236,37 @@ input[type=number] { -moz-appearance:textfield; }
   background-color: #E2942D;
 }
 
+.botonConoceme{
+  background-color: #E2942D;
+}
+
+/**  PAGINACION   -------------------------------------------------------------------------------------**/
+
+.paginacion {
+	width: 100%;
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+
+.paginacion a{
+	display: inline-block;
+	padding: 15px 20px;
+	border-radius: 50px;
+	border:1px solid rgba(255,255,255,.2);
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+.paginacion a:hover {
+	border:1px solid #fff;
+	text-decoration: none;
+}
+
+.paginacion .izquierda .fa {
+	margin-right: 10px;
+}
+
+.paginacion .derecha .fa {
+	margin-left: 10px;
+}
