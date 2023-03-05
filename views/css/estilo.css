@@ -14,10 +14,16 @@ body {
 }
 
 /**  NAV  -------------------------------------------------------------------------------------**/
+.navbar {
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 25px;
+font-weight: bold;
+color: #c76f26;
+}
 
 .nav-logo-home {
-  height: 40px;
-  width: 49px;
+  height: 35px;
+  width: 54px;
 }
 
 .nav-logo-inicio-pata{
@@ -29,6 +35,8 @@ body {
 .nav-logo-inicio{
   margin-top: 10px;
 }
+
+
 
 /**  FOOTER  -------------------------------------------------------------------------------------**/
 .texto-footer-snapDog{
@@ -240,34 +248,39 @@ input[type=number] { -moz-appearance:textfield; }
 	width: 100%;
 	margin-bottom: 30px;
 	overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  gap: 30px;
 }
 
-.paginacion a{
-	display: inline-block;
-	padding: 15px 20px;
-	border-radius: 50px;
-	border:1px solid rgba(255,255,255,.2);
-	-webkit-transition: all .3s ease;
-	-o-transition: all .3s ease;
-	transition: all .3s ease;
+.paginacion .paginacion-derecha a{
+  color:#E2942D;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.paginacion a:hover {
-	border:1px solid #fff;
-	text-decoration: none;
+.paginacion .paginacion-izquierda a{
+  color:#E2942D;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.paginacion .izquierda .fa {
-	margin-right: 10px;
-}
-
-.paginacion .derecha .fa {
-	margin-left: 10px;
-}
 
 
 
 /**  MENU   -------------------------------------------------------------------------------------**/
 .imagenMenuPrincipal{
   height: 1000px;
+}
+
+
+/**  BLOG   -------------------------------------------------------------------------------------**/
+.blogPrueba{
+  color: red;
 }

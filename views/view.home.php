@@ -22,7 +22,7 @@ require_once './php/home.php';
       <p>
         Ayudamos a personas a encontrar su mascota
       </p>
-      <button type="button" class="btn btn-outline-light">
+      <button type="button " class="btn btn-outline-light border">
         <span class="pt-1">Registrate</span>
       </button>
     </div>
@@ -168,12 +168,16 @@ require_once './php/home.php';
 
     <!-- Paginacion -->
     <div class="paginacion">
-      <?php if ($pagina_actual < $num_paginas) : ?>
-        <a href="index.php?p=<?php echo $pagina_actual + 1 ?>" class="derecha">Pagina Siguiente <i class="fa fa-long-arrow-right"></i></a>
-      <?php endif; ?>
-      <?php if ($pagina_actual > 1 && $pagina_actual <= $num_paginas) : ?>
-        <a href="index.php?p=<?php echo $pagina_actual - 1 ?>" class="izquierda"><i class="fa fa-long-arrow-left"></i> Pagina Anterior</a>
-      <?php endif; ?>
+      <div class="paginacion-derecha">
+        <?php if ($pagina_actual < $num_paginas) : ?>
+          <a href="index.php?p=<?php echo $pagina_actual + 1 ?>" class="derecha">Pagina Siguiente      <i class="glyphicon glyphicon-arrow-right"></i></a>
+        <?php endif; ?>
+      </div>
+      <div class="paginacion-izquierda">
+        <?php if ($pagina_actual > 1 && $pagina_actual <= $num_paginas) : ?>
+          <a href="index.php?p=<?php echo $pagina_actual - 1 ?>" class="izquierda"><i class="glyphicon glyphicon-arrow-left"></i>      Pagina Anterior</a>
+        <?php endif; ?>
+      </div>
     </div>
   </div>
 </section>
