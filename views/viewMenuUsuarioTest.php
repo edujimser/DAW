@@ -5,7 +5,7 @@
                 <div class='container'>
                     <div class='card'>
                         <div class='card-header'>
-                            <h1>Test Perruno <?php echo $_SESSION['nomUser']?></h1>
+                            <h1>Test Perruno <span><?php echo $_SESSION['nomUser']?></span></h1>
                         </div>
                         <div class='card-body'>
                            <form class="formularioDatosPersonales" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" name="formularioDatosPersonales" id="formularioDatosPersonales">

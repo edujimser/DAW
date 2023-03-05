@@ -38,20 +38,24 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.5rem;
 }
 
+h1 span{
+    font-family: fantasy;
+}
+
 p {
     margin-top: 0;
     margin-bottom: 1rem;
 }
 
 a {
-    color:#dbc7ac;
+    color:#ffffff;
     text-decoration: none;
     background-color: transparent;
 }
 
 a:hover {
-    color: #dbc7ac;
-    text-decoration: underline;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -171,15 +175,19 @@ h1, .h1 {
 }
 
 .dashboard-nav a {
+    text-decoration: none;
     color: #ffffff;
+    font-weight:bold;
 }
 
 .dashboard-nav a:hover {
     text-decoration: none;
+    color: #ffffff;
+    font-weight:bold;
 }
 
 .dashboard-nav {
-    background-color: #d8ac71;
+    background-color: #E2942D;
 }
 
 .dashboard-nav a {
@@ -246,11 +254,11 @@ h1, .h1 {
 }
 
 .dashboard-nav-item:hover {
-    background: #b48240;
+    background: #f3ae55;
 }
 
 .active {
-    background: #a17233;
+    background: #f3b564;
 }
 
 .dashboard-nav-dropdown {
@@ -443,6 +451,11 @@ h1, .h1 {
 }
 
 
+/**  DATOS PERSONALES  -------------------------------------------------------------------------------------**/
+
+.imagenMenuPrincipal{
+    height: 1700px;
+  }
 
 /**  DATOS PERSONALES  -------------------------------------------------------------------------------------**/
 
@@ -457,4 +470,5 @@ h1, .h1 {
   }
   
   
+
   

@@ -126,16 +126,10 @@ footer ul li a:hover{
 }
 
 
-.registro .contenedor-formulario-registro .formulario-registro button{
-  color: rgb(255, 255, 255);
+.registro .contenedor-formulario-registro .formulario-registro  button{
+  color: white;
   background-color: #E2942D;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-/*para que se vea el cursor como clickable cuando se pasa por encima del botón*/
-cursor: pointer;
-flex-direction: row;
-font-size: 27px;
-border-radius: 50px;
-border: solid #316fe3;
 }
 
 .registro .contenedor-formulario-registro .formulario-registro button:hover {
@@ -269,4 +263,11 @@ input[type=number] { -moz-appearance:textfield; }
 
 .paginacion .derecha .fa {
 	margin-left: 10px;
+}
+
+
+
+/**  MENU   -------------------------------------------------------------------------------------**/
+.imagenMenuPrincipal{
+  height: 1000px;
 }

@@ -168,12 +168,13 @@
 
                         </div>
                         <!-- SNIPPER --> 
-                        <div class="d-flex justify-content-center pt-3">
+                        <div class="d-flex justify-content-center pt-3 contendor-boton">
                             <button type="submit" name="submit" id ="submit" value="registro" class="btn fw-semibold btn-block mb-4"> Registrate </button>
                         </div>
 
                         <div class="text-center">
-                            <p> Tienes cuenta? <a href="http://127.0.0.1/DAW/php/login.php">Inicia Sessión</a></p>
+                            <p> Tienes cuenta? <a href="http://127.0.0.1/DAW/php/login.php">Iniciar Sessión</a></p>
+                            <p>Volver a la <a href="http://127.0.0.1/DAW/index.php">Home</a></p>
                         </div>
 
                     </div>

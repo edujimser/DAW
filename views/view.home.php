@@ -13,7 +13,7 @@ require_once './php/home.php';
 
 <section>
   <!-- INTRO -->
-  <div class="bannerTopHome text-white py-5 mt-5">
+  <div class="bannerTopHome text-white mt-5">
     <div class="container py-4">
       <h1>
         Forma Parte de la familia de <br />
@@ -25,6 +25,9 @@ require_once './php/home.php';
       <button type="button" class="btn btn-outline-light">
         <span class="pt-1">Registrate</span>
       </button>
+    </div>
+    <div class="container">
+      <img src="http://127.0.0.1/DAW/views/img/perroHome.png" alt="">
     </div>
   </div>
   <!-- INTRO -->

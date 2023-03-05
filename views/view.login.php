@@ -62,6 +62,7 @@
 
                 <div class="text-center">
                     <p>No tienes cuenta? <a href="http://127.0.0.1/DAW/php/registro.php">Registrate</a></p>
+                    <p>Volver a la <a href="http://127.0.0.1/DAW/index.php">Home</a></p>
                 </div>
             </form>
         </div>
