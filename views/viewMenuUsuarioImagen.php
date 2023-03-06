@@ -4,21 +4,30 @@
         <div class='container'>
             <div class='card'>
                 <div class='card-header'>
-                    <h1>Imagen Usuario <?php echo $_SESSION['nomUser'] ?></h1>
+                    <h1>Imagen Usuario <span><?php echo $_SESSION['nomUser'] ?><span></h1>
                 </div>
                 <div class='card-body'>
-                    <form name="MiForm" id="MiForm" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" enctype="multipart/form-data">
-                        <h4 class="text-center">Seleccione imagen a cargar</h4>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">Archivos</label>
-                            <div class="col-sm-8">
-                                <input type="file" class="form-control" id="imagen" name="imagen" multiple>
-                            </div>
-                            <button type="submit" name="submit" id="submit" value="datosImagen" class="btn btn-primary">Cargar Imagen</button>
-                        </div>
-                    </form>
+                    <form class="formularioDatosPersonales" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" name="formularioDatosImagen" id="formularioDatosImagen" enctype="multipart/form-data">
+                        <div>
+                            <div class="card-body p-md-5 text-black">
 
-                    
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline">
+                                            <input type="file" id="nombre" name="foto" class="form-control form-control-lg" />
+                                        </div>
+                                        <div class="d-flex justify-content-center pt-3">
+                                            <button type="submit" name="submit" id="submit" value="datosImagen" class="btn fw-semibold btn-block mb-4"> Subir Fotografía </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline">
+                                            <img src="http://127.0.0.1/DAW/views/img/user.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </form>
                 </div>
             </div>
         </div>

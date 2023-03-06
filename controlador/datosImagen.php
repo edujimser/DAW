@@ -1,6 +1,49 @@
 <?php
 
-// INSERTAR IMAGEN USUARIO
+// COMPROBAR EXISTENCIA IMAGEN
+function comprarexistencia($idUser){
+    //CREDENCIALES
+    $Host = 'localhost';
+    $Username = 'root';
+    $Password = '';
+    $dbName = 'principal';
+
+    //CONEXION
+    $db = new mysqli($Host, $Username, $Password, $dbName);
+
+    // VALIDAR CONEXION
+    if ($db->connect_error) {
+        die("Connection failed: " . $db->connect_error);
+    }
+    //VALIDAR IMAGEN IMAGEN
+    $result = $db->query("SELECT *  FROM imagenusuario WHERE idUser = $idUser");
+
+    if($result->num_rows > 0){
+        return true;
+    }else{
+        return false;
+    };
+}
+
+// BORARR EXISTENCIA IMAGEN
+function borrarImagen($idUser){
+    //CREDENCIALES
+    $Host = 'localhost';
+    $Username = 'root';
+    $Password = '';
+    $dbName = 'principal';
+
+    //CONEXION
+    $db = new mysqli($Host, $Username, $Password, $dbName);
+
+    // VALIDAR CONEXION
+    if ($db->connect_error) {
+        die("Connection failed: " . $db->connect_error);
+    }
+    //BORRAR IMAGEN IMAGEN
+    $db->query("SELECT *  FROM imagenusuario WHERE idUser = $idUser");
+}
+
 function evniarImagenControlador($idUser, $imgContenido, $estado)
 {
     //CREDENCIALES
