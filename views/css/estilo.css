@@ -284,3 +284,23 @@ input[type=number] { -moz-appearance:textfield; }
 .blogPrueba{
   color: red;
 }
+
+.article {
+  margin-bottom: 40px;
+}
+
+.article__title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.article__content {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.error {
+  color: red;
+  margin-bottom: 20px;
+}
