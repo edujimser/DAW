@@ -15,6 +15,4 @@ $inicio = ($pagina_actual > 1) ? (($pagina_actual * $usuarios_por_pagina + 1)- $
     $num_paginas = ceil($i / $usuarios_por_pagina);
     //OBTENER TODOS LOS DATOS USUARIOS AL CONTROLADOR
     $datosUsuarios = obtenerDatosUsuario($inicio, $inicio + $usuarios_por_pagina -1);
-
-
 ?>

@@ -17,12 +17,12 @@
                                             <input type="file" id="nombre" name="foto" class="form-control form-control-lg" />
                                         </div>
                                         <div class="d-flex justify-content-center pt-3">
-                                            <button type="submit" name="submit" id="submit" value="datosImagen" class="btn fw-semibold btn-block mb-4"> Subir Fotografía </button>
+                                                <button type="submit" name="submit" id="submit" value="datosImagen" class="btn fw-semibold btn-block mb-4"> Subir Fotografía </button>
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-4">
                                         <div class="form-outline">
-                                            <img src="http://127.0.0.1/DAW/views/img/user.png" alt="">
+                                             <?php echo '<img src="data:image/jpeg;base64,' . $imagen_codificada . '" alt="imagen">' ?>
                                         </div>
                                     </div>
                                 </div>
