@@ -36,7 +36,7 @@
                         <!-- Left links -->
 
                         <li class="nav-item">
-                            <a class="nav-link mt-2" href="#">Adoptantes</a>
+                            <a class="nav-link mt-2" href="http://127.0.0.1/DAW/adoptantes.php">Adoptantes</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mt-2" href="#">¿Cómo funciona?</a>

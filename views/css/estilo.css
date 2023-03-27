@@ -303,4 +303,46 @@ input[type=number] { -moz-appearance:textfield; }
 .error {
   color: red;
   margin-bottom: 20px;
+  
+}
+
+/**  MENSAJE TARJETA   -------------------------------------------------------------------------------------**/
+.contenedorMensajeTarjeta{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mensajeTarjeta{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rem;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.mensajeTarjeta .texto{
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.mensajeTarjeta .contendorBotonTexto .botonTarjeta{
+  color: white;
+  background-color: #E2942D;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.mensajeTarjeta .contendorBotonTexto{
+  
+}
+
+.mensajeTarjeta .contendorBotonTexto .botonTarjeta a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.mensajeTarjeta .contendorBotonTexto .botonTarjeta:hover {
+  background-color: #CE7A33;
 }

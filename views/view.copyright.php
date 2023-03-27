@@ -1,4 +1,5 @@
 <?php require_once dirname(__FILE__) . './bloques/nav.php'; ?>
+
 <div class="contenedor-general">
     <div class="contenedor-general-texto">
         <div class="container-scroll">
