@@ -12,7 +12,7 @@ require '../controlador/datosImagen.php';
 
 
 // RESPUESTA DEL POST 
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES) ) {
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES['foto']['tmp_name']) ) {
 
     $nombre_imagen =  $_FILES['foto']['name'];
 

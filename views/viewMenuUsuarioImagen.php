@@ -14,7 +14,7 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-4">
                                         <div class="form-outline">
-                                            <input type="file" id="nombre" name="foto" class="form-control form-control-lg" />
+                                            <input type="file" id="imagen" name="foto" class="form-control form-control-lg" />
                                         </div>
                                         <div class="d-flex justify-content-center pt-3">
                                                 <button type="submit" name="submit" id="submit" value="datosImagen" class="btn fw-semibold btn-block mb-4"> Subir Fotografía </button>
@@ -34,6 +34,7 @@
     </div>
 </div>
 </div>
+<script src="http://127.0.0.1/DAW/js/imagenMenu.js"></script>
 <script src="http://127.0.0.1/DAW/js/menuUsuario.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 </body>
