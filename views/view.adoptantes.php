@@ -17,7 +17,7 @@ require 'php/adoptantes.php';
 <section>
   <div class="container my-5">
     <header class="mb-4">
-+
+
     </header>
 
     <div class="row">

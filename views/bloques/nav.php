@@ -39,10 +39,10 @@
                             <a class="nav-link mt-2" href="http://127.0.0.1/DAW/adoptantes.php">Adoptantes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mt-2" href="#">¿Cómo funciona?</a>
+                            <a class="nav-link mt-2" href="http://127.0.0.1/DAW/comoFunciona.php">¿Cómo funciona?</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mt-2" href="#">Conocenos</a>
+                            <a class="nav-link mt-2" href="http://127.0.0.1/DAW/conocenos.php">Conocenos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mt-2" href="#">Unete al proyecto</a>
