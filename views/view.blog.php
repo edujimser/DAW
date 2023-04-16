@@ -35,5 +35,28 @@
 	}
 	?>
 	
+	<h1>Noticias de animales de compañía</h1>
+
+	<?php
+	// Realizar la solicitud GET a la API para obtener las noticias de animales de compañía
+	$url = 'http://api-noticias.php'; 
+	$response = file_get_contents($url);
+	$noticias = json_decode($response);
+
+	// Verificar si se han obtenido resultados
+	if (!empty($noticias)) {
+		// Mostrar cada noticia en la página
+		foreach ($noticias as $noticia) {
+			echo '<h2>' . $noticia->titulo . '</h2>';
+			echo '<p>' . $noticia->contenido . '</p>';
+			echo '<a href="' . $noticia->url . '">Leer más</a>';
+			echo '<hr>';
+		}
+	} else {
+		// Mostrar un mensaje si no se han obtenido resultados
+		echo '<p>No se encontraron noticias.</p>';
+	}
+	?>
+	
 </body>
 </html>
