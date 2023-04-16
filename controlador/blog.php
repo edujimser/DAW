@@ -2,7 +2,7 @@
 
 // Función para obtener todos los artículos del blog
 function obtenerArticulos() {
-    $url = "http://tu_api.com/ruta/articulos";   //*CAMBIAR LA URL POR LA DE LA API
+    $url = "http://api-fuction.php";   //*CAMBIAR LA URL POR LA DE LA API
     $ch = curl_init();
 
     curl_setopt($ch, CURLOPT_URL, $url);
