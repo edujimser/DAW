@@ -45,7 +45,7 @@
                             <a class="nav-link mt-2" href="http://127.0.0.1/DAW/conocenos.php">Conocenos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mt-2" href="#">Unete al proyecto</a>
+                            <a class="nav-link mt-2" href="http://127.0.0.1/DAW/unete.php">Unete al proyecto</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mt-2" href="./php/blog.php">Blog</a>

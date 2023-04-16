@@ -1,4 +1,10 @@
-<?php require_once dirname(__FILE__) . './bloques/nav.php'; ?>
+<?php
+session_start();
+?>
+<!-- REQUIRIMIENTO NAVEGADOR -->
+<?php
+require 'views/bloques/nav.php';
+?>
 
 <div class="contenedor-general">
     <div class="contenedor-general-texto">
@@ -20,4 +26,8 @@
         </div>
     </div>
 </div>
-<?php require_once dirname(__FILE__) . './bloques/footer.php'; ?>
+
+<!-- REQUIRIMIENTO FOOTER -->
+<?php
+require 'views/bloques/footer.php';
+?>

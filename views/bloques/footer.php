@@ -49,16 +49,16 @@
             Aviso Legales
           </h6>
           <p>
-            <a href="http://127.0.0.1/DAW/views/view.cookies.php" class="text-reset">Cookies</a>
+            <a href="http://127.0.0.1/DAW/cookies.php" class="text-reset">Cookies</a>
           </p>
           <p>
-            <a href="http://127.0.0.1/DAW/views/view.datosPersonales.php" class="text-reset">Datos Personales</a>
+            <a href="http://127.0.0.1/DAW/datosPersonales.php" class="text-reset">Datos Personales</a>
           </p>
           <p>
-            <a href="http://127.0.0.1/DAW/views/view.terminosLegales.php" class="text-reset">Términos Legales</a>
+            <a href="http://127.0.0.1/DAW/terminosLegales.php" class="text-reset">Términos Legales</a>
           </p>
           <p>
-            <a href="http://127.0.0.1/DAW/views/view.copyright.php" class="text-reset">Copyright</a>
+            <a href="http://127.0.0.1/DAW/copyright.php" class="text-reset">Copyright</a>
           </p>
         </div>
         <!-- Grid column -->
