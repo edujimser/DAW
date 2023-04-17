@@ -13,7 +13,39 @@
 </head>
 <body>
 	<h1>Últimos artículos</h1>
-	
+    <p>En este blog encontrarás noticias sobre adopciones de perros y gatos, consejos para el cuidado de mascotas y mucho más. ¡Únete a nuestra comunidad!</p>
+    
+    <h2>Últimas noticias</h2>
+    <ul>
+      <li><a href="#">Rescatamos a 10 perros de una perrera abandonada</a></li>
+      <li><a href="#">Gata ciega encuentra su nuevo hogar/a></li>
+      <li><a href="#">Celebramos nuestro primer aniversario</a></li>
+    </ul>
+    
+    <h2>Consejos para el cuidado de mascotas</h2>
+    <ul>
+      <li><a href="#">Cómo elegir la comida adecuada para tu perro o gato</a></li>
+      <li><a href="#">Consejos para prevenir pulgas y garrapatas</a></li>
+      <li><a href="#">Ejercicios para mantener a tu perro en forma</a></li>
+    </ul>
+    
+    <h2>Historias de adopción</h2>
+    <ul>
+      <li><a href="#">La historia de cómo adopté a mi perro</a></li>
+      <li><a href="#">Gatos adoptados: De la calle a un hogar amoroso</a></li>
+      <li><a href="#">Cómo ayudar a tu mascota a adaptarse a su nuevo hogar</a></li>
+    </ul>
+    
+    <footer>
+      <p>Síguenos en redes sociales:</p>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
 	<?php
 	// Realizar la solicitud GET a la API para obtener los últimos artículos
 	$url = 'http://api-fuction.php'; 
