@@ -614,3 +614,124 @@ input[type=number] { -moz-appearance:textfield; }
   text-align: center;
   color: black;
 }
+
+/** BLOG   -------------------------------------------------------------------------------------**/
+
+.contenedorImangenBlog {
+  width: 100%;
+  height: 605px;
+  padding-top: 10px;
+  background-color: #E2942D;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.contenedorImangenBlog img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin-bottom: -39px;
+}
+
+.contenedorBlog{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedorBlog__contenido{
+    width: 70%;
+    padding: 15rem  0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.contenedorBlog__flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  background-color: #E2942D;
+  height: 300px;
+  max-width: 1780px;
+}
+
+.contenedorBlog__imagen img{
+  height: 300px;
+  width: 400px;
+}
+
+.contenedorBlog__texto{
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  justify-content: center;
+  gap: 2rem;
+  padding-right: 7rem;
+}
+
+.contenedorBlog__heading{
+  color: white;
+  font-weight: 900;
+}
+
+
+
+/** PAGINA BLOG   -------------------------------------------------------------------------------------**/
+
+.contenedorImangenPaginaBlog {
+  width: 100%;
+  height: 605px;
+  background-color: #E2942D;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.contenedorImangenPaginaBlog img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contenedorTituloPaginaBlog{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedorTituloPaginaBlog h1{
+  font-size: 50px;
+  font-weight: 800;
+  padding-top: 10px;
+  text-align: center;
+  color: #E2942D;
+}
+
+
+.contenedorPaginaBlog{
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.contenedorPaginaBlog h2{
+  font-size: 50px;
+  font-weight: 800;
+  padding-top: 10px;
+  text-align: center;
+  color: #E2942D;
+}

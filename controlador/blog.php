@@ -1,71 +1,24 @@
 <?php
 
-// Función para obtener todos los artículos del blog
-function obtenerArticulos() {
-    $url = "http://api-fuction.php";   //*CAMBIAR LA URL POR LA DE LA API
-    $ch = curl_init();
+// OBTENER DATOS BLOG
 
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+function obtenerDatosBlog(){
 
-    $response = curl_exec($ch);
-    curl_close($ch);
+    $endpoint = "http://" . $_SERVER['HTTP_HOST'] . "/DAW/api/api-blog/index.api.php";
 
-    return json_decode($response, true);
-}
+    $curl = curl_init();
 
-// Función para obtener un artículo específico del blog
-function obtenerArticulo($id) {
-    $url = "http://tu_api.com/ruta/articulo?id=" . $id; //*CAMBIAR LA URL POR LA DE LA API
-    $ch = curl_init();
+    curl_setopt($curl, CURLOPT_URL, $endpoint);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1 );
+    curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "GET");
+    curl_setopt($curl, CURLOPT_POST, 1);
+    curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
 
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $datosTest = curl_exec($curl);
 
-    $response = curl_exec($ch);
-    curl_close($ch);
+    curl_close($curl);
 
-    return json_decode($response, true);
-}
-
-// Función para obtener todos los comentarios de un artículo específico del blog
-function obtenerComentarios($id) {
-    $url = "http://tu_api.com/ruta/comentarios?id=" . $id; //*CAMBIAR LA URL POR LA DE LA API
-    $ch = curl_init();
-
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-    $response = curl_exec($ch);
-    curl_close($ch);
-
-    return json_decode($response, true);
-}
-
-// Función para crear un nuevo artículo en el blog
-function crearArticulo($titulo, $contenido) {
-    $url = "http://tu_api.com/ruta/articulos"; //*CAMBIAR LA URL POR LA DE LA API
-    $data = array(
-        'titulo' => $titulo,
-        'contenido' => $contenido
-    );
-    $payload = json_encode($data);
-
-    $ch = curl_init();
-
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-        'Content-Type: application/json',
-        'Content-Length: ' . strlen($payload)
-    ));
-
-    $response = curl_exec($ch);
-    curl_close($ch);
-
-    return json_decode($response, true);
+    return json_decode($datosTest, true);
 }
 
 ?>

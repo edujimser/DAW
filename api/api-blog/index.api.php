@@ -3,7 +3,7 @@
  
      switch ($_SERVER["REQUEST_METHOD"]) {  
         case 'GET':
-            obtenerEntradas();
+            obtenerDatos();
             break;
     };
 
